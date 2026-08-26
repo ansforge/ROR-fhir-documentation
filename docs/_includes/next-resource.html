@@ -1,0 +1,20 @@
+{% assign section = site.data.menu.sidebar[page.section] %}
+{% for item in section %}
+    {% if item.subfolderitems %}
+        {% for subitem in item.subfolderitems %}
+            {% if subitem.url == page.url and subitem.next-url %}
+                <hr class="mt-5">
+                <p class="text-right mt-5">
+                    <a href="{{ subitem.next-url | relative_url }}" class="btn btn--style1 btn--white">{{ subitem.next-title }}</a>
+                </p>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        {% if item.url == page.url and item.next-url %}
+            <hr class="mt-5">
+            <p class="text-right mt-5">
+                <a href="{{ item.next-url | relative_url }}" class="btn btn--style1 btn--white">{{ item.next-title }}</a>
+            </p>
+        {% endif %}
+    {% endif %}
+{% endfor %}

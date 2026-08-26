@@ -1,0 +1,14 @@
+.wysiwyg table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.wysiwyg table th,
+.wysiwyg table td {
+  border: 1px solid #e5e5e5;
+  padding: 0.5rem;
+  vertical-align: top;
+}
+.wysiwyg table th {
+  background-color: #f6f6f6;
+}

@@ -1,0 +1,24 @@
+# Site settings
+title: Documentation de l'API FHIR du ROR
+email: your-email@example.com
+description: >-
+  Documentation de l'API FHIR du Répertoire national de l'Offre et des Ressources
+  (ROR) : modalités d'accès aux données, ressources FHIR profilées, spécifications
+  fonctionnelles et techniques.
+baseurl: "/ROR-fhir-documentation" # le sous-chemin du site, ex. /blog
+url: "https://ansforge.github.io" # le nom d'hôte de base du site
+github_username: ansforge
+highlighter: rouge
+
+# Build settings
+remote_theme: ansforge/ans-jekyll-theme
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+
+ror:
+  ig_url: https://interop.esante.gouv.fr/ig/fhir/ror
+  bas_auth_url: https://bas-auth-api.qualif.ror.esante.gouv.fr
+  bas_api_url: https://bas-api-fhir.qualif.ror.esante.gouv.fr
+  prod_auth_url: https://auth-api.ror.esante.gouv.fr
+  prod_api_url: https://api-fhir.ror.esante.gouv.fr

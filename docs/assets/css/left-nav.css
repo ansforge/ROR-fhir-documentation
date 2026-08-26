@@ -1,0 +1,27 @@
+.left-menu {
+  border-right: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
+}
+.left-menu .nav-lvl-1 {
+  list-style: none;
+  padding-left: 0;
+}
+.left-menu .nav-lvl-2,
+.left-menu .nav-lvl-3 {
+  list-style: none;
+  padding-left: 1rem;
+}
+.left-menu .common-nav-item > a {
+  display: block;
+  padding: 0.15rem 0;
+  color: #1d1d1d;
+  text-decoration: none;
+}
+.left-menu .common-nav-item > a:hover {
+  text-decoration: underline;
+}
+.left-menu .common-nav-item.active > a {
+  font-weight: bold;
+  color: #000091;
+}
