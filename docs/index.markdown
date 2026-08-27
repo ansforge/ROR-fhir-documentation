@@ -49,29 +49,26 @@ Vous parcourez [G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv
 
 ## Vous savez si vous êtes un consommateur ou un fournisseur du ROR national
 
-<div class="row">
-    <div class="border rounded col p-2 m-1">
-        <h3>Je suis un consommateur</h3>
-        <hr aria-hidden="true">
-        <div>
-            <div style="display: flex; justify-content: space-around;" class="m-5">
-            <div markdown="1">
-            [Démarrer](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
-            </div>
-            </div>           
-        </div>
-    </div>
-    <div class="border rounded col p-2 m-1">
-        <h3>Je suis un fournisseur</h3>
-        <hr aria-hidden="true">
-        <div>
-            <div style="display: flex; justify-content: space-around;" class="m-5">
-            <div markdown="1">
-            [Démarrer](todo){:class="btn  btn--style1"}
-            </div>
-            </div>           
-        </div>
-    </div>
+<div class="row" markdown="1">
+
+<div class="border rounded col p-2 m-1" markdown="1">
+### Je suis un consommateur
+<hr aria-hidden="true">
+
+<div style="display: flex; justify-content: space-around;" class="m-5" markdown="1">
+[Démarrer](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
+</div>
+</div>
+
+<div class="border rounded col p-2 m-1" markdown="1">
+### Je suis un fournisseur
+<hr aria-hidden="true">
+
+<div style="display: flex; justify-content: space-around;" class="m-5" markdown="1">
+[Démarrer](todo){:class="btn  btn--style1"}
+</div>
+</div>
+
 </div>
 
 <br />
