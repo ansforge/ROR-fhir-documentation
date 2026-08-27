@@ -8,7 +8,6 @@ subTitle: Ressources FHIR
 <div class="wysiwyg" markdown="1">
 - [Présentation de la ressource](#presentation)
 - [Caractéristiques techniques](#caracteristiques)
-- [Paramètres de recherche](#parametres-recherche)
 - [Recherche sur critères](#recherche-criteres)
   - [Rechercher tout](#recherche-tout)
   - [Rechercher par identifiant national du professionnel](#recherche-identifiant)
@@ -16,6 +15,7 @@ subTitle: Ressources FHIR
   - [Rechercher par date de mise à jour](#recherche-derniere-maj)
   - [Rechercher par région source](#recherche-region)
   - [Rechercher sur plusieurs identifiants (filtre avancé)](#recherche-filtre-avance)
+- [Paramètres de recherche](#parametres-recherche)
 </div>
 <br />
 
@@ -39,31 +39,12 @@ Cette ressource ne décrit que les caractéristiques intrinsèques et stables du
 
 </div>
 
-<a id="parametres-recherche"></a>
-## 3. Paramètres de recherche
-La ressource `RORPractitioner` peut être interrogée à l'aide des paramètres de recherche suivants, notamment l'identifiant national du professionnel.
-
-Profil officiel : [RORPractitioner]({{ site.ror.ig_url }}/StructureDefinition-ror-practitioner.html){:target="_blank"}
-
-<div class="wysiwyg" markdown="1">
-
-| Attribut ME 3.0 | Search parameters | Natif FHIR | Type FHIR | Description |
-| --- | --- | --- | --- | --- |
-| - | _filter | Oui | special | Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code> |
-| - | _content | Oui | special | Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code> |
-| - | _id | Oui | token | Identification technique de la ressource |
-| Metadonnee / dateMiseJour | _ lastUpdated | Oui | date | Date de dernière mise à jour. |
-| Metadonnee / regionSource | _tag | Oui | token | Code région de la source de la donnée. |
-| Identifiant | identifier | Oui | token | idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS. |
-
-</div>
-
 <a id="recherche-criteres"></a>
-## 4. Recherche sur critères
+## 3. Recherche sur critères
 Voici quelques exemples de requêtes sur les professionnels.
 
 <a id="recherche-tout"></a>
-#### 4.1 Rechercher tout (sans critère)
+#### 3.1 Rechercher tout (sans critère)
 **Récit utilisateur :**
 En tant que client de l'API, je souhaite récupérer l'ensemble des professionnels.
 
@@ -132,7 +113,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-identifiant"></a>
-#### 4.2 Rechercher par identifiant national du professionnel
+#### 3.2 Rechercher par identifiant national du professionnel
 **Récit utilisateur :**
 En tant que client de l'API, je souhaite récupérer le professionnel correspondant à un identifiant national donné (idNat_PS, ex : numéro RPPS), afin par exemple de compléter les informations d'un `RORPractitionerRole` retrouvé par ailleurs.
 
@@ -206,7 +187,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-id-technique"></a>
-#### 4.3 Rechercher par identification technique
+#### 3.3 Rechercher par identification technique
 **Récit utilisateur :**
 En tant que client de l'API, je souhaite récupérer directement un professionnel à partir de son identifiant technique ROR, par exemple après l'avoir obtenu via une recherche sur `RORPractitionerRole` ou `RORHealthcareService`.
 
@@ -270,7 +251,7 @@ print(f"Practitioner found: id={practitioner['id']}")
 <br />
 
 <a id="recherche-derniere-maj"></a>
-#### 4.4 Rechercher par date de mise à jour
+#### 3.4 Rechercher par date de mise à jour
 **Récit utilisateur :**
 En tant que client de l'API, je souhaite récupérer l'ensemble des professionnels mis à jour depuis une date donnée, afin de synchroniser mon système d'information avec le ROR.
 
@@ -343,7 +324,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-region"></a>
-#### 4.5 Rechercher par région source
+#### 3.5 Rechercher par région source
 **Récit utilisateur :**
 En tant que client régional de l'API, je souhaite récupérer l'ensemble des professionnels dont la donnée est issue d'une région source donnée (ex : région 84 - Auvergne-Rhône-Alpes).
 
@@ -418,7 +399,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-filtre-avance"></a>
-#### 4.6 Rechercher sur plusieurs identifiants (filtre avancé)
+#### 3.6 Rechercher sur plusieurs identifiants (filtre avancé)
 **Récit utilisateur :**
 En tant que client de l'API, je souhaite récupérer en une seule requête plusieurs professionnels connus par leur identifiant national (ex : rapprochement d'une liste de RPPS), en utilisant le paramètre de filtre avancé `_filter`.
 
@@ -496,3 +477,22 @@ for entry in bundle.get("entry", []):
 </div>
 </div>
 <br />
+
+<a id="parametres-recherche"></a>
+## 4. Paramètres de recherche
+La ressource `RORPractitioner` peut être interrogée à l'aide des paramètres de recherche suivants, notamment l'identifiant national du professionnel.
+
+Profil officiel : [RORPractitioner]({{ site.ror.ig_url }}/StructureDefinition-ror-practitioner.html){:target="_blank"}
+
+<div class="wysiwyg" markdown="1">
+
+| Attribut ME 3.0 | Search parameters | Natif FHIR | Type FHIR | Description |
+| --- | --- | --- | --- | --- |
+| - | _filter | Oui | special | Paramètre de recherche de filtre qui prend en charge une grammaire de recherche plus sophistiquée. Voir la documentation (https://hl7.org/fhir/search_filter.html) pour plus de détails <code><span style="color: #ff0000;">draft</span></code> |
+| - | _content | Oui | special | Recherche sur le contenu textuel de la ressource <code><span style="color: #ff0000;">draft</span></code> |
+| - | _id | Oui | token | Identification technique de la ressource |
+| Metadonnee / dateMiseJour | _ lastUpdated | Oui | date | Date de dernière mise à jour. |
+| Metadonnee / regionSource | _tag | Oui | token | Code région de la source de la donnée. |
+| Identifiant | identifier | Oui | token | idNat_PS (Professionnel) : Identification nationale du professionnel définie par le CI-SIS. |
+
+</div>
