@@ -9,6 +9,7 @@ subTitle: Ressources FHIR
 - [Présentation de la ressource](#presentation)
 - [Caractéristiques techniques](#caracteristiques)
 - [Recherche sur critères](#recherche-criteres)
+  - [Rechercher tout](#recherche-tout)
   - [Rechercher par date de mise à jour](#recherche-par-date)
   - [Rechercher par activité opérationnelle](#recherche-par-activite)
   - [Rechercher par type d'offre et modalité d'accueil](#recherche-par-type-modalite)
@@ -41,8 +42,99 @@ C'est la ressource pivot du modèle : elle référence l'organisation qui porte 
 ## 3. Recherche sur critères
 Voici quelques exemples de requêtes sur l'offre opérationnelle.
 
+<a id="recherche-tout"></a>
+#### 3.1 Rechercher tout (sans critère)
+**Description du scénario :** Un consommateur souhaite récupérer l'ensemble des offres opérationnelles, actives et inactives.
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService
+```
+
+**Description du scénario :** Un consommateur souhaite récupérer les offres opérationnelles ainsi que les organisations qui les portent.
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService
+```
+
+**Description du scénario :** Un consommateur souhaite récupérer les offres opérationnelles ainsi que l'ensemble des ressources liées (organisation et ses parentes, lieu de réalisation, situations opérationnelles et professionnels).
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
+<blockquote class="callout-warning">
+<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code> de FHIR. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
+</blockquote>
+
+**Exemples de code :**
+
+<div class="code-sample">
+<div class="tab-content" data-name="curl">
+{% highlight bash %}
+{% raw %}
+curl -H "Authorization: Bearer {{access_token}}" \
+     -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
+     -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
+     -H "Ror-Role-Metier-Code: {{role_code}}" \
+     -H "Ror-Role-Metier-System: {{role_system}}" \
+     "{{BASE}}/HealthcareService"
+{% endraw %}
+{% endhighlight %}
+</div>
+<div class="tab-content" data-name="java">
+{% highlight java %}
+// client HAPI FHIR configuré avec l'access_token et les headers Ror-* (voir la page "Consommation des API FHIR")
+IGenericClient client = FhirTestUtils.createRorClient();
+
+Bundle bundle = client.search()
+        .forResource(HealthcareService.class)
+        .returnBundle(Bundle.class)
+        .execute();
+
+for (BundleEntryComponent entry : bundle.getEntry()) {
+    HealthcareService healthcareService = (HealthcareService) entry.getResource();
+    logger.info("HealthcareService found: id={}", healthcareService.getIdElement().getIdPart());
+}
+{% endhighlight %}
+</div>
+<div class="tab-content" data-name="python">
+{% highlight python %}
+{% raw %}
+import requests
+
+base_url = "{{BASE}}/HealthcareService"
+headers = {
+    "Authorization": f"Bearer {{access_token}}",
+    "Ror-Profil-Utilisateur-Code": "{{profil_code}}",
+    "Ror-Profil-Utilisateur-System": "{{profil_system}}",
+    "Ror-Role-Metier-Code": "{{role_code}}",
+    "Ror-Role-Metier-System": "{{role_system}}",
+}
+
+response = requests.get(base_url, headers=headers)
+response.raise_for_status()
+bundle = response.json()
+for entry in bundle.get("entry", []):
+    healthcare_service = entry["resource"]
+    print(f"HealthcareService found: id={healthcare_service['id']}")
+{% endraw %}
+{% endhighlight %}
+</div>
+</div>
+<br />
+
 <a id="recherche-par-date"></a>
-#### 3.1 Rechercher par date de mise à jour (_lastUpdated)
+#### 3.2 Rechercher par date de mise à jour (_lastUpdated)
 **Description du scénario :** Un consommateur souhaite mettre à jour toute l'offre mise à jour depuis une certaine date >= (06/11/2022).
 
 **Requête expliquée :**
@@ -130,7 +222,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-par-activite"></a>
-#### 3.2 Rechercher par activité opérationnelle (specialty)
+#### 3.3 Rechercher par activité opérationnelle (specialty)
 **Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur.
 
 **Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 227 - Pédopsychiatrie infanto-juvénile »
@@ -226,7 +318,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-par-type-modalite"></a>
-#### 3.3 Rechercher par type d'offre et modalité d'accueil (service-category, characteristic)
+#### 3.4 Rechercher par type d'offre et modalité d'accueil (service-category, characteristic)
 **Description du scénario :** Un consommateur cherche les offres ayant un type d'offre ET une modalité d'accueil qu'il indique.
 
 **Exemple :** Recherche des offres caractérisées par un type d'offre « 50 – Institut thérapeutique éducatif et pédagogique (ITEP)» et une modalité d'accueil « 01 – Accueil séquentiel accepté »
@@ -329,7 +421,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-par-proximite"></a>
-#### 3.4 Rechercher à proximité géographique (location.near-insee-code, location.near)
+#### 3.5 Rechercher à proximité géographique (location.near-insee-code, location.near)
 **Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
 **Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 013 – Cardiologie générale », située dans un rayon de 15 kilomètres autour de Saint-Herblain (code commune 44162)
@@ -434,7 +526,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-par-localisation"></a>
-#### 3.5 Rechercher par département, code postal ou commune (location.address-postalcode, location.commune-cog)
+#### 3.6 Rechercher par département, code postal ou commune (location.address-postalcode, location.commune-cog)
 **Description du scénario :** Un consommateur recherche les offres ayant un type d'offre, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
 **Exemple :** Recherche des offres caractérisées par le type d'offre "21 - Accueil ou hébergement pour personnes âgées dépendantes, sans spécificité » proposant un mode de prise en charge « 46 – Accueil de jour » et une spécialisation de prise en charge « 24 - Handicap à prédominance cognitive avec trouble du comportement (dont traumatisé crânien, syndrome de Korsakoff,...)» et située dans le département 71.
@@ -555,7 +647,7 @@ for entry in bundle.get("entry", []):
 <br />
 
 <a id="recherche-par-zone-professionnel-region"></a>
-#### 3.6 Rechercher par zone d'intervention ou par professionnel (intervention-zone, _has)
+#### 3.7 Rechercher par zone d'intervention ou par professionnel (intervention-zone, _has)
 **Description du scénario :** Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
 **Exemple :** Recherche des offres caractérisées par le type d'offre « 30 – Service d'aide et d'accompagnement à domicile (SAAD) », proposant une activité opérationnelle de type « 293 - Accompagnements pour accomplir les activités domestiques » et ayant la commune 29151 dans la zone d'intervention.
@@ -654,10 +746,6 @@ for entry in bundle.get("entry", []):
 La ressource `RORHealthcareService` peut être interrogée à l'aide de plusieurs paramètres de recherche, notamment l'activité opérationnelle, le type d'offre, la modalité d'accueil, la localisation géographique ou la date de mise à jour.
 
 Profil officiel : [RORHealthcareService]({{ site.ror.ig_url }}/StructureDefinition-ror-healthcareservice.html){:target="_blank"}
-
-<blockquote class="callout-warning">
-<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code> de FHIR. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
-</blockquote>
 
 <div class="wysiwyg" markdown="1">
 
