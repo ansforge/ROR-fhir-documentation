@@ -5,8 +5,6 @@ header:
     url: /
   - title: Guide
     url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
-  - title: Modalités d'accès
-    url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
   - title: Ressources FHIR
     url: /pages/guide/modeleV3/resources/practitioner.html
   - title: Exemples
