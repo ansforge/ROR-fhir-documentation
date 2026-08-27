@@ -78,16 +78,16 @@ GET [BASE]/PractitionerRole?_include=PractitionerRole:practitioner&_include=Prac
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/PractitionerRole"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -106,8 +106,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/PractitionerRole"
@@ -125,8 +125,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     practitioner_role = entry["resource"]
     print(f"PractitionerRole found: id={practitioner_role['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -150,16 +150,16 @@ GET [BASE]/PractitionerRole/753
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/PractitionerRole?_id=753"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -179,8 +179,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/PractitionerRole"
@@ -199,8 +199,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     practitioner_role = entry["resource"]
     print(f"PractitionerRole found: id={practitioner_role['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -224,16 +224,16 @@ GET [BASE]/PractitionerRole?identifier=11102379616&_include=PractitionerRole:pra
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/PractitionerRole?identifier=11102379616"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -253,8 +253,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/PractitionerRole"
@@ -273,8 +273,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     practitioner_role = entry["resource"]
     print(f"PractitionerRole found: id={practitioner_role['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -298,16 +298,16 @@ GET [BASE]/PractitionerRole?_lastUpdated=ge2023-12-01&_include=PractitionerRole:
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/PractitionerRole?_lastUpdated=ge2023-12-01"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -327,8 +327,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/PractitionerRole"
@@ -347,8 +347,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     practitioner_role = entry["resource"]
     print(f"PractitionerRole found: id={practitioner_role['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -369,16 +369,16 @@ GET [BASE]/PractitionerRole?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/PractitionerRole?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM%7C52"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -399,8 +399,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/PractitionerRole"
@@ -419,8 +419,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     practitioner_role = entry["resource"]
     print(f"PractitionerRole found: id={practitioner_role['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />

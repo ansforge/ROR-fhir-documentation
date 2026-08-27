@@ -102,16 +102,16 @@ GET [BASE]/Organization?_revinclude=PractitionerRole:organization
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -130,8 +130,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -149,8 +149,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} name={organization.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -174,16 +174,16 @@ GET [BASE]/Organization?identifier=1290004324&_include=Organization:partof
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization?identifier=750000001"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -204,8 +204,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -224,8 +224,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} finess={organization['identifier'][0]['value']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -249,16 +249,16 @@ GET [BASE]/Organization?name=Centre Hospitalier Universitaire de Nantes
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization?name:contains=chu"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -279,8 +279,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -299,8 +299,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} name={organization.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -324,16 +324,16 @@ GET [BASE]/Organization?_lastUpdated=ge2026-06-01&_lastUpdated=le2026-06-30
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization?_lastUpdated=ge2026-06-01"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -354,8 +354,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -374,8 +374,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} lastUpdated={organization['meta']['lastUpdated']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -399,16 +399,16 @@ GET [BASE]/Organization?type=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEn
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization?type=https://mos.esante.gouv.fr/NOS/TRE_R66-CategorieEtablissement/FHIR/TRE-R66-CategorieEtablissement%7C101"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -431,8 +431,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -453,8 +453,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} name={organization.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -478,16 +478,16 @@ GET [BASE]/Organization?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHI
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Organization?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM%7C11"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -510,8 +510,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Organization"
@@ -532,8 +532,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     organization = entry["resource"]
     print(f"Organization found: id={organization['id']} name={organization.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />

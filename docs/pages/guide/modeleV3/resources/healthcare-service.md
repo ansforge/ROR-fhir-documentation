@@ -113,16 +113,16 @@ GET [BASE]/HealthcareService?_include=HealthcareService:organization&_include:it
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -141,8 +141,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -160,8 +160,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -185,16 +185,16 @@ GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organi
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?_lastUpdated=ge2022-11-06T15:00"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -215,8 +215,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -235,8 +235,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']} lastUpdated={healthcare_service['meta']['lastUpdated']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -260,16 +260,16 @@ GET [BASE]/HealthcareService?_filter=(specialty eq https://mos.esante.gouv.fr/NO
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle%7C227"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -292,8 +292,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -314,8 +314,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -339,16 +339,16 @@ GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.g
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation%7C50&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil%7C01"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -375,8 +375,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -398,8 +398,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -431,16 +431,16 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle%7C013&location.near-insee-code=44162%7C15%7Ckm"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -465,8 +465,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -488,8 +488,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -516,16 +516,16 @@ GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?location.address-postalcode=71&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation%7C21"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -550,8 +550,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -573,8 +573,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -601,16 +601,16 @@ GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionO
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -632,8 +632,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/HealthcareService"
@@ -654,8 +654,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     healthcare_service = entry["resource"]
     print(f"HealthcareService found: id={healthcare_service['id']}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />

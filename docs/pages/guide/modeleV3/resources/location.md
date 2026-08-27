@@ -112,16 +112,16 @@ GET [BASE]/Location?status=active
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -140,8 +140,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -159,8 +159,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -187,16 +187,16 @@ GET [BASE]/Location?identifier=YYY&_include=Location:organization
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location?identifier=XXX"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -216,8 +216,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -236,8 +236,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -261,16 +261,16 @@ GET [BASE]/Location?type=https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FH
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location?type=https://mos.esante.gouv.fr/NOS/TRE_R343-FonctionLieu/FHIR/TRE-R343-FonctionLieu|001"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -291,8 +291,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -313,8 +313,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -344,16 +344,16 @@ GET [BASE]/Location?_filter=(address-postalcode eq "60000" or "76620")
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location?address-postalcode=44000"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -373,8 +373,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -393,8 +393,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -418,16 +418,16 @@ GET [BASE]/Location?near-insee-code=44162|15|km
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location?near=47.21827323906432|-1.6369631507460436|15|km"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -449,8 +449,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -469,8 +469,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
@@ -505,16 +505,16 @@ GET [BASE]/Location?_lastUpdated=ge2024-01-01&_sort=_lastUpdated
 
 <div class="code-sample">
 <div class="tab-content" data-name="curl">
-{% raw %}
 {% highlight bash %}
+{% raw %}
 curl -H "Authorization: Bearer {{access_token}}" \
      -H "Ror-Profil-Utilisateur-Code: {{profil_code}}" \
      -H "Ror-Profil-Utilisateur-System: {{profil_system}}" \
      -H "Ror-Role-Metier-Code: {{role_code}}" \
      -H "Ror-Role-Metier-System: {{role_system}}" \
      "{{BASE}}/Location?_lastUpdated=ge2024-01-01"
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 <div class="tab-content" data-name="java">
 {% highlight java %}
@@ -534,8 +534,8 @@ for (BundleEntryComponent entry : bundle.getEntry()) {
 {% endhighlight %}
 </div>
 <div class="tab-content" data-name="python">
-{% raw %}
 {% highlight python %}
+{% raw %}
 import requests
 
 base_url = "{{BASE}}/Location"
@@ -554,8 +554,8 @@ bundle = response.json()
 for entry in bundle.get("entry", []):
     location = entry["resource"]
     print(f"Location found: id={location['id']} name={location.get('name')}")
-{% endhighlight %}
 {% endraw %}
+{% endhighlight %}
 </div>
 </div>
 <br />
