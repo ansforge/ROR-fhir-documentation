@@ -17,9 +17,9 @@ Les organisations sont structurées de façon hiérarchique : une entité géogr
 
 | Caractéristique | Détail |
 | --- | --- |
-| Endpoint | `[BASE]/Organization` — `[BASE]` correspond à la base de l'URL des API FHIR du bac-à-sable ou de la production, voir [Environnements et endpoints]({{ '/pages/guide/acces-donnees/environnements-endpoints.html' | relative_url }}) |
+| Endpoint | `[BASE]/Organization` — `[BASE]` correspond à la base de l'URL des API FHIR du bac-à-sable ou de la production, voir [Environnements et endpoints]({{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}) |
 | Méthodes HTTP | `GET` |
-| Header requis | `Authorization` (jeton d'accès), ainsi que les 4 headers `Ror-*` décrits sur la page [Consommation des API FHIR]({{ '/pages/guide/acces-donnees/consommation-api.html' | relative_url }}) |
+| Header requis | `Authorization` (jeton d'accès), ainsi que les 4 headers `Ror-*` décrits sur la page [Consommation des API FHIR]({{ '/pages/guide/modeleV3/acces-donnees/consommation-api.html' | relative_url }}) |
 
 </div>
 
@@ -27,7 +27,7 @@ Les organisations sont structurées de façon hiérarchique : une entité géogr
 
 La ressource `ROROrganization` peut être interrogée à l'aide de plusieurs paramètres de recherche, notamment le numéro FINESS.
 
-L'ensemble des paramètres de recherche applicables à cette ressource est détaillé sur la page [Paramètres de recherche — ROROrganization]({{ '/pages/guide/resources/search-params/organization.html' | relative_url }}).
+L'ensemble des paramètres de recherche applicables à cette ressource est détaillé sur la page [Paramètres de recherche — ROROrganization]({{ '/pages/guide/modeleV3/resources/search-params/organization.html' | relative_url }}).
 
 ## 4. Profil officiel
 

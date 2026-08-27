@@ -49,15 +49,15 @@ Le guide d'implémentation FHIR est disponible sur [interop.esante.gouv.fr/ig/fh
 
 | Ressource | Description |
 | --- | --- |
-| [RORHealthcareService]({{ '/pages/guide/resources/healthcare-service.html' | relative_url }}) | Ressource décrivant les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne |
-| [RORLocation]({{ '/pages/guide/resources/location.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre |
-| [ROROrganization]({{ '/pages/guide/resources/organization.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes |
-| [RORPractitioner]({{ '/pages/guide/resources/practitioner.html' | relative_url }}) | Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d'une personne physique, qui travaille en tant que professionnel |
-| [RORPractitionerRole]({{ '/pages/guide/resources/practitioner-role.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du professionnel dans la réalisation de l'offre |
+| [RORHealthcareService]({{ '/pages/guide/modeleV3/resources/healthcare-service.html' | relative_url }}) | Ressource décrivant les prestations que peut réaliser une structure et qui permettent de répondre au besoin de santé d'une personne |
+| [RORLocation]({{ '/pages/guide/modeleV3/resources/location.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire l'espace disposant d'un ensemble de ressources pour réaliser une offre |
+| [ROROrganization]({{ '/pages/guide/modeleV3/resources/organization.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire les organismes du domaine sanitaire, médico-social et social immatriculés dans le FINESS et les organisations internes |
+| [RORPractitioner]({{ '/pages/guide/modeleV3/resources/practitioner.html' | relative_url }}) | Profil créée dans le cadre du ROR pour décrire les données d'identification pérennes d'une personne physique, qui travaille en tant que professionnel |
+| [RORPractitionerRole]({{ '/pages/guide/modeleV3/resources/practitioner-role.html' | relative_url }}) | Profil créé dans le cadre du ROR pour décrire les modalités d'exercice opérationnelles du professionnel dans la réalisation de l'offre |
 
 </div>
 
-Ces correspondances sont détaillées dans [Ref_03] — voir la page [Mapping FHIR]({{ '/pages/guide/mapping.html' | relative_url }}).
+Ces correspondances sont détaillées dans [Ref_03] — voir le [guide d'implémentation officiel]({{ site.ror.ig_url }}).
 
 ## Politique d'accès aux données
 
@@ -76,7 +76,7 @@ La politique d'accès aux données est détaillée dans l'annexe « Politique d'
 
 </div>
 
-Le profil d'accès conditionne directement le mode d'authentification à utiliser — voir [Authentification]({{ '/pages/guide/acces-donnees/authentification.html' | relative_url }}) — et les endpoints à utiliser — voir [Environnements et endpoints]({{ '/pages/guide/acces-donnees/environnements-endpoints.html' | relative_url }}).
+Le profil d'accès conditionne directement le mode d'authentification à utiliser — voir [Authentification]({{ '/pages/guide/modeleV3/acces-donnees/authentification.html' | relative_url }}) — et les endpoints à utiliser — voir [Environnements et endpoints]({{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}).
 
 ## Documents de référence
 
@@ -86,7 +86,7 @@ Le profil d'accès conditionne directement le mode d'authentification à utilise
 | --- | --- | --- |
 | [Ref_01] ROR – Modèle d'exposition | 3.0.1 | Description des données communes aux échanges entre les ROR et les SI externes |
 | [Ref_02] ROR – IG | 1.0 | [Guide d'implémentation du ROR National]({{ site.ror.ig_url }}) |
-| [Ref_03] ROR - Mapping FHIR et modèle d'exposition 3.0 | 1.0 | Description du mapping des concepts du modèle d'exposition ROR au format FHIR — [Mapping FHIR du modèle de données du ROR]({{ '/pages/guide/mapping.html' | relative_url }}) |
+| [Ref_03] ROR - Mapping FHIR et modèle d'exposition 3.0 | 1.0 | Description du mapping des concepts du modèle d'exposition ROR au format FHIR — voir le [guide d'implémentation officiel]({{ site.ror.ig_url }}) |
 | [Ref_04] Politique d'accès | 3.0 | [Annexe « Politique d'accès » de la doctrine d'urbanisation](https://industriels.esante.gouv.fr/sites/default/files/media/document/ROR%20Politique%20d%27acc%C3%A8s%20aux%20donn%C3%A9es_ME3.0_VFD.pdf) |
 
 </div>

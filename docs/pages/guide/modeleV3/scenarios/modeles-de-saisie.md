@@ -126,7 +126,7 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ�
 ### Critères de recherche pour Search
 
   Les critères de recherche applicables pour RORQuestionnaire sont accesible ici :
-[paragraphe dédié]({{ '/pages/guide/resources/search-params/questionnaire.html' | relative_url }}).
+[paragraphe dédié]({{ '/pages/guide/modeleV3/resources/search-params/questionnaire.html' | relative_url }}).
 
 **En complément, vous pouvez accéder aux Capability Statements [ici]({{ site.ror.ig_url }}/artifacts.html#behavior-capability-statements)**
 
@@ -496,4 +496,4 @@ GET [BASE]/Questionnaire?context=https://mos.esante.gouv.fr/NOS/TRE_R66-Categori
 
 Pour construire d'autres requêtes selon vos besoins :
 * vous pouvez consulter les spécifications du standard FHIR [Http - FHIR v4.0.1 (hl7.org)](https://hl7.org/fhir/R4/http.html)
-* utiliser les critères de recherche défini au [paragraphe dédié]({{ '/pages/guide/resources/search-params/questionnaire.html' | relative_url }})
+* utiliser les critères de recherche défini au [paragraphe dédié]({{ '/pages/guide/modeleV3/resources/search-params/questionnaire.html' | relative_url }})

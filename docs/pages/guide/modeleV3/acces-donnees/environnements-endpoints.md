@@ -45,6 +45,6 @@ Si l'éditeur est un consommateur profil 0 (accès public), l'équipe du ROR tra
 
 <blockquote class="stu-note">
 <p>
-Le choix de l'environnement (bac-à-sable vs production) et du type de certificat (IGC-SANTE Test vs IGC-SANTE) dépend uniquement de l'environnement cible. Le mode d'authentification (client_secret vs certificat) dépend, lui, du <a href="{{ '/pages/guide/acces-donnees/vue-ensemble.html#politique-dacces-aux-donnees' | relative_url }}">profil d'accès aux données</a> — voir la page <a href="{{ '/pages/guide/acces-donnees/authentification.html' | relative_url }}">Authentification</a>.
+Le choix de l'environnement (bac-à-sable vs production) et du type de certificat (IGC-SANTE Test vs IGC-SANTE) dépend uniquement de l'environnement cible. Le mode d'authentification (client_secret vs certificat) dépend, lui, du <a href="{{ '/pages/guide/modeleV3/acces-donnees/vue-ensemble.html#politique-dacces-aux-donnees' | relative_url }}">profil d'accès aux données</a> — voir la page <a href="{{ '/pages/guide/modeleV3/acces-donnees/authentification.html' | relative_url }}">Authentification</a>.
 </p>
 </blockquote>

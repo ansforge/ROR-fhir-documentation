@@ -82,8 +82,8 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ�
 ### Critères de recherche
 
   Les critères de recherche applicables sont définis sur la page dédiée pour :
--    [Structuredefinition-ror-measure]({{ '/pages/guide/resources/search-params/measure.html' | relative_url }})
--    [Structuredefinition-ror-measurereport]({{ '/pages/guide/resources/search-params/measurereport.html' | relative_url }}) (critères de recherche applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
+-    [Structuredefinition-ror-measure]({{ '/pages/guide/modeleV3/resources/search-params/measure.html' | relative_url }})
+-    [Structuredefinition-ror-measurereport]({{ '/pages/guide/modeleV3/resources/search-params/measurereport.html' | relative_url }}) (critères de recherche applicables à la ressource Measure, grâce au [chainage inversé](https://hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante :
 `_has:MeasureReport:measure:[NOM CRITERE]`)
 
 **En complément, vous pouvez accéder aux Capability Statements [ici]({{ site.ror.ig_url }}/artifacts.html#behavior-capability-statements)**

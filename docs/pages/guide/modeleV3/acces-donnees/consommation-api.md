@@ -22,9 +22,9 @@ Les valeurs de ces 4 headers sont transmises à l'éditeur en même temps que le
 
 ## Description des API FHIR
 
-Les API FHIR sont décrites en détail dans les [spécifications techniques]({{ '/pages/guide/scenarios/consultation-donnees-capacitaires.html' | relative_url }}) de cette documentation, ainsi que sur le [guide d'implémentation officiel]({{ site.ror.ig_url }}/specifications_techniques_1.html).
+Les API FHIR sont décrites en détail dans les [spécifications techniques]({{ '/pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html' | relative_url }}) de cette documentation, ainsi que sur le [guide d'implémentation officiel]({{ site.ror.ig_url }}/specifications_techniques_1.html).
 
-Par exemple, pour la **consultation de l'offre**, remplacer `[BASE]` par la base de l'URL des API FHIR décrite sur la page [Environnements et endpoints]({{ '/pages/guide/acces-donnees/environnements-endpoints.html' | relative_url }}) :
+Par exemple, pour la **consultation de l'offre**, remplacer `[BASE]` par la base de l'URL des API FHIR décrite sur la page [Environnements et endpoints]({{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}) :
 
 ```
 GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization._lastUpdated:above ge 2022-11-06T15:00)
@@ -41,4 +41,4 @@ GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organi
     #inclus les Practitioner référencés par PractitionerRole
 ```
 
-Voir la page [Exemple cURL complet]({{ '/pages/guide/acces-donnees/exemple-curl.html' | relative_url }}) pour un exemple exécutable de bout en bout (authentification + requête).
+Voir la page [Exemple cURL complet]({{ '/pages/guide/modeleV3/acces-donnees/exemple-curl.html' | relative_url }}) pour un exemple exécutable de bout en bout (authentification + requête).

@@ -5,7 +5,7 @@ title: Authentification
 subTitle: Modalités d'accès aux données
 ---
 
-Le mode d'authentification à mettre en œuvre dépend du [profil d'accès aux données]({{ '/pages/guide/acces-donnees/vue-ensemble.html' | relative_url }}) affecté à l'éditeur lors de l'intégration.
+Le mode d'authentification à mettre en œuvre dépend du [profil d'accès aux données]({{ '/pages/guide/modeleV3/acces-donnees/vue-ensemble.html' | relative_url }}) affecté à l'éditeur lors de l'intégration.
 
 ## L'authentification pour les profils 0 (accès aux données publiques)
 
@@ -13,7 +13,7 @@ Les profils 0 d'accès aux données (accès uniquement aux données publiques) s
 
 Ce sont les seuls à pouvoir s'authentifier avec un `client_secret`. Les autres profils doivent s'authentifier avec un certificat (voir ci-dessous).
 
-L'URL de l'`access_token` endpoint est décrite sur la page [Environnements et endpoints]({{ '/pages/guide/acces-donnees/environnements-endpoints.html' | relative_url }}).
+L'URL de l'`access_token` endpoint est décrite sur la page [Environnements et endpoints]({{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}).
 
 ```mermaid
 sequenceDiagram
@@ -48,7 +48,7 @@ Le client FHIR s'authentifie via une liaison mTLS auprès du serveur d'autorisat
 
 ### Flux 3 à 5 : consommation de l'API
 
-Le client FHIR se connecte au service cible du ROR en HTTPS. Voir la page [Consommation des API FHIR]({{ '/pages/guide/acces-donnees/consommation-api.html' | relative_url }}).
+Le client FHIR se connecte au service cible du ROR en HTTPS. Voir la page [Consommation des API FHIR]({{ '/pages/guide/modeleV3/acces-donnees/consommation-api.html' | relative_url }}).
 
 ```mermaid
 sequenceDiagram
@@ -66,4 +66,4 @@ sequenceDiagram
     S-->>C: 5. accès aux données
 ```
 
-Voir la page [Exemple cURL complet]({{ '/pages/guide/acces-donnees/exemple-curl.html' | relative_url }}) pour des exemples complets, ainsi que les instructions de conversion d'un certificat `.p12` pour ces deux environnements.
+Voir la page [Exemple cURL complet]({{ '/pages/guide/modeleV3/acces-donnees/exemple-curl.html' | relative_url }}) pour des exemples complets, ainsi que les instructions de conversion d'un certificat `.p12` pour ces deux environnements.

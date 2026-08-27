@@ -75,6 +75,6 @@ curl --location 'https://bas-api-fhir.qualif.ror.esante.gouv.fr/ws-diffusion-fhi
 
 <blockquote class="stu-note">
 <p>
-Pour un usage en production, remplacez les hôtes <code>bas-auth-api.qualif.ror.esante.gouv.fr</code> et <code>bas-api-fhir.qualif.ror.esante.gouv.fr</code> par <code>auth-api.ror.esante.gouv.fr</code> et <code>api-fhir.ror.esante.gouv.fr</code> — voir <a href="{{ '/pages/guide/acces-donnees/environnements-endpoints.html' | relative_url }}">Environnements et endpoints</a>.
+Pour un usage en production, remplacez les hôtes <code>bas-auth-api.qualif.ror.esante.gouv.fr</code> et <code>bas-api-fhir.qualif.ror.esante.gouv.fr</code> par <code>auth-api.ror.esante.gouv.fr</code> et <code>api-fhir.ror.esante.gouv.fr</code> — voir <a href="{{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}">Environnements et endpoints</a>.
 </p>
 </blockquote>

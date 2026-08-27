@@ -787,7 +787,7 @@ PATCH [BASE]/HealthcareService/963
 
 **Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
-**Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre]({{ '/pages/guide/scenarios/saisie-offre.html' | relative_url }}#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)
+**Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre]({{ '/pages/guide/modeleV3/scenarios/saisie-offre.html' | relative_url }}#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)
 
 #### [spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
 
@@ -1246,4 +1246,4 @@ PUT [BASE]/HealthcareService/964
 
 **Description du scénario :** Un utilisateur ajoute un lieu de réalisation de l'offre dans une offre opérationnelle existante.
 
-**Requête :** Voir [scénario 1 du cas d'usage création et mise à jour du lieu de réalisation de l'offre]({{ '/pages/guide/scenarios/creation-maj-lieu-offre.html' | relative_url }}#scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft) (Ajout d’un lieu de réalisation de l’offre)
+**Requête :** Voir [scénario 1 du cas d'usage création et mise à jour du lieu de réalisation de l'offre]({{ '/pages/guide/modeleV3/scenarios/creation-maj-lieu-offre.html' | relative_url }}#scénario-1-ajout-dun-lieu-de-réalisation-de-loffre-draft) (Ajout d’un lieu de réalisation de l’offre)

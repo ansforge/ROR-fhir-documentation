@@ -4,13 +4,13 @@ header:
   - title: Accueil
     url: /
   - title: Guide
-    url: /pages/guide/getting-started/introduction.html
+    url: /pages/guide/modeleV3/getting-started/introduction.html
   - title: Modalités d'accès
-    url: /pages/guide/acces-donnees/vue-ensemble.html
+    url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
   - title: Ressources FHIR
-    url: /pages/guide/resources/practitioner.html
+    url: /pages/guide/modeleV3/resources/practitioner.html
   - title: Scénarios
-    url: /pages/guide/scenarios/consultation-donnees-capacitaires.html
+    url: /pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html
   - title: Changelog
     url: /pages/changelog/changelog.html
   - title: Liens externes
@@ -29,161 +29,149 @@ header:
 sidebar:
   guide:
     - page: Démarrage rapide
-      url: /pages/guide/getting-started/introduction.html
+      url: /pages/guide/modeleV3/getting-started/introduction.html
       title: Introduction
-      next-url: /pages/guide/acces-donnees/vue-ensemble.html
+      next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
       next-title: Modalités d'accès aux données
 
     - page: Modalités d'accès aux données
-      url: /pages/guide/acces-donnees/vue-ensemble.html
+      url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
       title: Modalités d'accès aux données
       subfolderitems:
         - page: Vue d'ensemble
-          url: /pages/guide/acces-donnees/vue-ensemble.html
+          url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
           title: Vue d'ensemble
-          next-url: /pages/guide/acces-donnees/environnements-endpoints.html
+          next-url: /pages/guide/modeleV3/acces-donnees/environnements-endpoints.html
           next-title: Environnements et endpoints
         - page: Environnements et endpoints
-          url: /pages/guide/acces-donnees/environnements-endpoints.html
+          url: /pages/guide/modeleV3/acces-donnees/environnements-endpoints.html
           title: Environnements et endpoints
-          next-url: /pages/guide/acces-donnees/authentification.html
+          next-url: /pages/guide/modeleV3/acces-donnees/authentification.html
           next-title: Authentification
         - page: Authentification
-          url: /pages/guide/acces-donnees/authentification.html
+          url: /pages/guide/modeleV3/acces-donnees/authentification.html
           title: Authentification
-          next-url: /pages/guide/acces-donnees/consommation-api.html
+          next-url: /pages/guide/modeleV3/acces-donnees/consommation-api.html
           next-title: Consommation des API FHIR
         - page: Consommation des API FHIR
-          url: /pages/guide/acces-donnees/consommation-api.html
+          url: /pages/guide/modeleV3/acces-donnees/consommation-api.html
           title: Consommation des API FHIR
-          next-url: /pages/guide/acces-donnees/exemple-curl.html
+          next-url: /pages/guide/modeleV3/acces-donnees/exemple-curl.html
           next-title: Exemple cURL complet
         - page: Exemple cURL complet
-          url: /pages/guide/acces-donnees/exemple-curl.html
+          url: /pages/guide/modeleV3/acces-donnees/exemple-curl.html
           title: Exemple cURL complet
 
     - page: Ressources FHIR
-      url: /pages/guide/resources/practitioner.html
+      url: /pages/guide/modeleV3/resources/practitioner.html
       title: Ressources FHIR
       subfolderitems:
         - page: RORPractitioner
-          url: /pages/guide/resources/practitioner.html
+          url: /pages/guide/modeleV3/resources/practitioner.html
           title: RORPractitioner
         - page: RORPractitionerRole
-          url: /pages/guide/resources/practitioner-role.html
+          url: /pages/guide/modeleV3/resources/practitioner-role.html
           title: RORPractitionerRole
         - page: ROROrganization
-          url: /pages/guide/resources/organization.html
+          url: /pages/guide/modeleV3/resources/organization.html
           title: ROROrganization
         - page: RORHealthcareService
-          url: /pages/guide/resources/healthcare-service.html
+          url: /pages/guide/modeleV3/resources/healthcare-service.html
           title: RORHealthcareService
         - page: RORLocation
-          url: /pages/guide/resources/location.html
+          url: /pages/guide/modeleV3/resources/location.html
           title: RORLocation
         - page: Paramètres de recherche
-          url: /pages/guide/resources/search-params/organization.html
+          url: /pages/guide/modeleV3/resources/search-params/organization.html
           title: Paramètres de recherche
           subfolderitems:
             - page: ROROrganization
-              url: /pages/guide/resources/search-params/organization.html
+              url: /pages/guide/modeleV3/resources/search-params/organization.html
               title: ROROrganization
             - page: RORLocation
-              url: /pages/guide/resources/search-params/location.html
+              url: /pages/guide/modeleV3/resources/search-params/location.html
               title: RORLocation
             - page: RORHealthcareService
-              url: /pages/guide/resources/search-params/healthcareservice.html
+              url: /pages/guide/modeleV3/resources/search-params/healthcareservice.html
               title: RORHealthcareService
             - page: RORPractitioner
-              url: /pages/guide/resources/search-params/practitioner.html
+              url: /pages/guide/modeleV3/resources/search-params/practitioner.html
               title: RORPractitioner
             - page: RORPractitionerRole
-              url: /pages/guide/resources/search-params/practitionerrole.html
+              url: /pages/guide/modeleV3/resources/search-params/practitionerrole.html
               title: RORPractitionerRole
             - page: RORTask
-              url: /pages/guide/resources/search-params/task.html
+              url: /pages/guide/modeleV3/resources/search-params/task.html
               title: RORTask
             - page: RORMeasure
-              url: /pages/guide/resources/search-params/measure.html
+              url: /pages/guide/modeleV3/resources/search-params/measure.html
               title: RORMeasure
             - page: RORMeasureReport
-              url: /pages/guide/resources/search-params/measurereport.html
+              url: /pages/guide/modeleV3/resources/search-params/measurereport.html
               title: RORMeasureReport
             - page: RORQuestionnaire
-              url: /pages/guide/resources/search-params/questionnaire.html
+              url: /pages/guide/modeleV3/resources/search-params/questionnaire.html
               title: RORQuestionnaire
-
-    - page: Mapping FHIR
-      url: /pages/guide/mapping.html
-      title: Mapping FHIR du modèle de données du ROR
-
-    - page: Sécurité
-      url: /pages/guide/securite.html
-      title: Sécurité
-
-    - page: Téléchargements
-      url: /pages/guide/downloads.html
-      title: Téléchargements
 
   scenarios:
     - page: Recherche et consultation de l'offre
-      url: /pages/guide/scenarios/consultation-donnees-capacitaires.html
+      url: /pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html
       title: Recherche et consultation de l'offre
       subfolderitems:
         - page: Consultation des données capacitaires
-          url: /pages/guide/scenarios/consultation-donnees-capacitaires.html
+          url: /pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html
           title: Consultation des données capacitaires
         - page: Consultation de l'offre (extraction)
-          url: /pages/guide/scenarios/consultation-offre-extraction.html
+          url: /pages/guide/modeleV3/scenarios/consultation-offre-extraction.html
           title: Consultation de l'offre (extraction)
         - page: Recherche d'offre sur critères principaux
-          url: /pages/guide/scenarios/recherche-criteres-principaux.html
+          url: /pages/guide/modeleV3/scenarios/recherche-criteres-principaux.html
           title: Recherche d'offre sur critères principaux
         - page: Recherche d'offre avec données capacitaires
-          url: /pages/guide/scenarios/recherche-donnees-capacitaires.html
+          url: /pages/guide/modeleV3/scenarios/recherche-donnees-capacitaires.html
           title: Recherche d'offre avec données capacitaires
         - page: Recherche sur informations tarifaires
-          url: /pages/guide/scenarios/recherche-informations-tarifaires.html
+          url: /pages/guide/modeleV3/scenarios/recherche-informations-tarifaires.html
           title: Recherche d'offre sur la base d'informations tarifaires
         - page: Recherche full-text
-          url: /pages/guide/scenarios/recherche-full-text.html
+          url: /pages/guide/modeleV3/scenarios/recherche-full-text.html
           title: Recherche d'offre via une technique « Full text »
 
     - page: Anomalies
-      url: /pages/guide/scenarios/signalement-anomalie.html
+      url: /pages/guide/modeleV3/scenarios/signalement-anomalie.html
       title: Anomalies
       subfolderitems:
         - page: Signalement d'anomalie
-          url: /pages/guide/scenarios/signalement-anomalie.html
+          url: /pages/guide/modeleV3/scenarios/signalement-anomalie.html
           title: Signalement d'anomalie
         - page: Mise à jour d'anomalie
-          url: /pages/guide/scenarios/mise-a-jour-anomalie.html
+          url: /pages/guide/modeleV3/scenarios/mise-a-jour-anomalie.html
           title: Mise à jour d'anomalie
         - page: Consultation d'anomalie
-          url: /pages/guide/scenarios/consultation-anomalie.html
+          url: /pages/guide/modeleV3/scenarios/consultation-anomalie.html
           title: Consultation d'anomalie
 
     - page: Saisie et mise à jour de l'offre
-      url: /pages/guide/scenarios/creation-maj-lieu-offre.html
+      url: /pages/guide/modeleV3/scenarios/creation-maj-lieu-offre.html
       title: Saisie et mise à jour de l'offre
       subfolderitems:
         - page: Création et mise à jour du lieu de réalisation de l'offre
-          url: /pages/guide/scenarios/creation-maj-lieu-offre.html
+          url: /pages/guide/modeleV3/scenarios/creation-maj-lieu-offre.html
           title: Création et mise à jour du lieu de réalisation de l'offre
         - page: Saisie de l'offre
-          url: /pages/guide/scenarios/saisie-offre.html
+          url: /pages/guide/modeleV3/scenarios/saisie-offre.html
           title: Saisie de l'offre
         - page: Mise à jour de l'offre
-          url: /pages/guide/scenarios/mise-a-jour-offre.html
+          url: /pages/guide/modeleV3/scenarios/mise-a-jour-offre.html
           title: Mise à jour de l'offre
         - page: Modèles de saisie
-          url: /pages/guide/scenarios/modeles-de-saisie.html
+          url: /pages/guide/modeleV3/scenarios/modeles-de-saisie.html
           title: Modèles de saisie
 
     - page: Pilotage
-      url: /pages/guide/scenarios/consultation-indicateurs-pilotage.html
+      url: /pages/guide/modeleV3/scenarios/consultation-indicateurs-pilotage.html
       title: Pilotage
       subfolderitems:
         - page: Consultation d'indicateurs de pilotage
-          url: /pages/guide/scenarios/consultation-indicateurs-pilotage.html
+          url: /pages/guide/modeleV3/scenarios/consultation-indicateurs-pilotage.html
           title: Consultation d'indicateurs de pilotage
