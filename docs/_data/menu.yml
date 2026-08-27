@@ -11,8 +11,6 @@ header:
     url: /pages/guide/modeleV3/resources/practitioner.html
   - title: Exemples
     url: /pages/guide/modeleV3/exemples/consultation-donnees-capacitaires.html
-  - title: Changelog
-    url: /pages/changelog/changelog.html
   - title: Liens externes
     subfolderitems:
       - page: Guide d'implémentation FHIR officiel
@@ -82,12 +80,6 @@ sidebar:
             - page: RORTask
               url: /pages/guide/modeleV3/resources/search-params/task.html
               title: RORTask
-            - page: RORMeasure
-              url: /pages/guide/modeleV3/resources/search-params/measure.html
-              title: RORMeasure
-            - page: RORMeasureReport
-              url: /pages/guide/modeleV3/resources/search-params/measurereport.html
-              title: RORMeasureReport
             - page: RORQuestionnaire
               url: /pages/guide/modeleV3/resources/search-params/questionnaire.html
               title: RORQuestionnaire
@@ -146,11 +138,3 @@ sidebar:
         - page: Modèles de saisie
           url: /pages/guide/modeleV3/exemples/modeles-de-saisie.html
           title: Modèles de saisie
-
-    - page: Pilotage
-      url: /pages/guide/modeleV3/exemples/consultation-indicateurs-pilotage.html
-      title: Pilotage
-      subfolderitems:
-        - page: Consultation d'indicateurs de pilotage
-          url: /pages/guide/modeleV3/exemples/consultation-indicateurs-pilotage.html
-          title: Consultation d'indicateurs de pilotage

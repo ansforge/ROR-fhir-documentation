@@ -20,7 +20,7 @@ Répertoires :
 * _includes : contient le footer, la navigation et le bouton "page suivante"
 * _layouts : contient le layout qui génère le menu latéral de gauche à partir de `page.section`
 * assets : contient le css, des images et du javascript
-* pages : contient les répertoires guide, specifications-techniques, saisie-et-mise-a-jour et changelog
+* pages : contient le répertoire guide
 
 # Menu
 

@@ -1,0 +1,77 @@
+{%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+<header class="header header-principal" role="banner">
+  <div class="header-principal__inner">
+    <div class="header-principal-left">
+      <div class="logos">
+        <div class="logo logo--0">
+          <a href="https://solidarites-sante.gouv.fr/">
+            <img src="{{ '/assets/ans/img/logo-ministere.svg' | relative_url }}" alt="Ministère de la Santé et de la Prévention"
+              width="107" height="62">
+          </a>
+        </div>
+        <div class="logo logo--1">
+          <a href="index.html">
+            <img src="{{ '/assets/ans/img/logo-ANS.svg' | relative_url }}" alt="Accueil Design System ANS" width="166" height="50">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-principal-right">
+      <div class="header-principal__nav">
+        <div class="navbar navbar-expand-xl navbar-light" tabindex="-1" id="menuPrincipalTarget">
+          <button type="button" class="navbar-toggler btn btn--icon-only btn-icon--header" data-toggle="collapse"
+            data-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false">
+            <svg class="svg-icon svg-menu" aria-hidden="true" focusable="false">
+              <use xlink:href="{{ '/assets/ans/svg-icons/icon-sprite.svg#menu' | relative_url }}"></use>
+            </svg>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="collapse navbar-collapse" id="menuPrincipal">
+            <button type="button" class="navbar-toggler-close d-xl-none btn btn--icon-only btn-icon--header"
+              data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false">
+              <svg class="svg-icon svg-close" aria-hidden="true" focusable="false">
+                <use xlink:href="{{ '/assets/ans/svg-icons/icon-sprite.svg#close' | relative_url }}"></use>
+              </svg>
+              <span class="sr-only">Fermer le menu</span>
+            </button>
+            {%- if titles_size > 0 -%}
+            <nav role="navigation" aria-label="Menu principal">
+              <ul class="navbar-nav nav-lvl--1">
+                {% assign counter = 0 %}
+                {% for item in site.data.menu.header %}
+                  {% if item.subfolderitems[0] %}
+                    {% assign counter = counter | plus: 1 %}
+                    <li class="nav-item common-nav-item">
+                      <button class="nav-link" type="button" data-toggle="collapse"
+                        data-target="#nav1simple-nav-collapse-submenu--{{ counter }}" aria-controls="nav1simple-nav-collapse-submenu--{{ counter }}"
+                        aria-expanded="false">{{ item.title }}</button>
+                      <div class="collapse nav-collapse" id="nav1simple-nav-collapse-submenu--{{ counter }}" data-parent="#menuPrincipal">
+                        <div class="nav-collapse-inner">
+                          <ul class="navbar-nav nav-lvl--2">
+                            {% for entry in item.subfolderitems %}
+                            <li class="nav-item is-active common-nav-item">
+                              <a class="nav-link" href="{{ entry.url | relative_url }}">{{ entry.page }} <span class="sr-only">(page courante)</span></a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  {% else %}
+                    <li class="nav-item common-nav-item">
+                      <a class="nav-link" href="{{ item.url | relative_url }}"
+                      {% if item.external %} target="_blank" {% endif %}
+                      >{{ item.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </nav>
+            {%- endif -%}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
