@@ -123,17 +123,30 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-date"></a>
 #### 3.2 Rechercher par date de mise à jour (_lastUpdated)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite récupérer les offres qui ont été mises à jour depuis une certaine date (y compris les mises à jour de l'organisation rattachée), afin de synchroniser mon système d'information.
+**Description du scénario :** Un consommateur souhaite mettre à jour toute l'offre mise à jour depuis une certaine date >= (06/11/2022).
 
-**Requêtes :**
+**Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00
-# récupère les HealthcareService mis à jour depuis le 06/11/2022 15h00 inclus
+GET [BASE]/HealthcareService?_lastUpdated=ge2022-11-06T15:00 #critère de recherche de sur la date de mise à jour (ge = greater than)
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
-GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization._lastUpdated:above ge 2022-11-06T15:00)&_include=HealthcareService:organization&_include:iterate=Organization:partof&_include=HealthcareService:location&_revinclude=PractitionerRole:service&_include=PractitionerRole:practitioner
-# critère de recherche sur la date de mise à jour de l'offre OU de l'une de ses organisations parentes, avec inclusion des ressources liées
+**Description du scénario :** Un consommateur souhaite par exemple mettre à jour toute l'offre mise à jour depuis une certaine date >=(06/11/2022) ou dont l'organisation est mise à jour depuis une certaine date >= (06/11/2022).
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_filter=(_lastUpdated ge 2022-11-06T15:00 or organization._lastUpdated:above ge 2022-11-06T15:00) #critère de recherche sur la date de mise à jour 
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
 **Exemples de code :**
@@ -198,17 +211,34 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-activite"></a>
 #### 3.3 Rechercher par activité opérationnelle (specialty)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite rechercher les offres qui correspondent à une (ou plusieurs) activité(s) opérationnelle(s).
+**Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'unique valeur recherchée par le consommateur.
 
-**Requêtes :**
+**Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 227 - Pédopsychiatrie infanto-juvénile »
+
+**Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227
-# recherche les offres caractérisées par l'activité opérationnelle 227 - Pédopsychiatrie infanto-juvénile
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|227 #critère de recherche sur l'activité opérationnelle
+&_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
-GET [BASE]/HealthcareService?_filter=(specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|005 or https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|481)
-# recherche les offres caractérisées par l'activité opérationnelle 005 - Allergologie OU 481 - Médecine générale à orientation Allergologie
+**Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle qui correspond à l'une des valeurs recherchées par le consommateur.
+
+**Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 005 – Allergologie » ou l'activité opérationnelle « 481 - Médecine générale à orientation Allergologie ».
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_filter=(specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|005 or https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|481) #critère de recherche sur l'activité opérationnelle
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Servicen
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
 **Exemples de code :**
@@ -277,17 +307,36 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-type-modalite"></a>
 #### 3.4 Rechercher par type d'offre et modalité d'accueil (service-category, characteristic)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite rechercher les offres qui correspondent à la fois à un type d'offre ET à une modalité d'accueil donnés (recherche multicritères).
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre ET une modalité d'accueil qu'il indique.
 
-**Requêtes :**
+**Exemple :** Recherche des offres caractérisées par un type d'offre « 50 – Institut thérapeutique éducatif et pédagogique (ITEP)» et une modalité d'accueil « 01 – Accueil séquentiel accepté »
+
+**Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|50&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01
-# recherche les offres caractérisées par le type d'offre 50 - Institut thérapeutique éducatif et pédagogique (ITEP) ET la modalité d'accueil 01 - Accueil séquentiel accepté
+GET [BASE]/HealthcareService?service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|50 #critère de recherche sur le type d'offre
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R338-ModaliteAccueil/FHIR/TRE-R338-ModaliteAccueil|01 #critère de recherche sur la modalité d'accueil
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
-GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a))
-# recherche les offres caractérisées par le type d'offre 102 - SMR locomoteur OU l'activité opérationnelle 233 - Réadaptation des affections de l'appareil locomoteur, adaptées à un patient de 35 ans
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre OU une activité opérationnelle qu'il indique pour un patient d'âge donné.
+
+**Exemple :** Recherche des offres caractérisées par le type d'offre « 102 - Soins Médicaux et de Réadaptation (SMR) locomoteur » OU une activité opérationnelle « 233 - Réadaptation des affections de l'appareil locomoteur » pour un patient de 35 ans.(age-range-low <=35 et age-range-high >=35)
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_filter=(((service-category eq https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|102) or (specialty eq https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|233)) #critère de recherche sur l'activité opérationnelle OU (or) sur la catégorie d'organisation
+and (age-range-low le 35|https://unitsofmeasure.org|a and age-range-high ge 35|https://unitsofmeasure.org|a)) #critère de recherche sur l'age du patient
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
 **Exemples de code :**
@@ -361,17 +410,20 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-proximite"></a>
 #### 3.5 Rechercher à proximité géographique (location.near-insee-code, location.near)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite rechercher les offres caractérisées par une activité opérationnelle, situées dans un rayon donné autour du lieu de résidence d'un patient (chainage sur `location`).
+**Description du scénario :** Un consommateur cherche les offres ayant une activité opérationnelle particulière, dans un périmètre géographique proche du lieu de résidence d'un patient.
 
-**Requêtes :**
+**Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 013 – Cardiologie générale », située dans un rayon de 15 kilomètres autour de Saint-Herblain (code commune 44162)
+
+**Requête 1 expliquée (near-insee-code) :**
 
 ```sh
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&location.near-insee-code=44162|15|km
-# recherche les offres caractérisées par l'activité opérationnelle 013 - Cardiologie générale, dans un rayon de 15 km autour de la commune 44162 (Saint-Herblain)
-
-GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013&location.near=47.21827323906432|-1.6369631507460436|15|km
-# recherche les offres caractérisées par la même activité opérationnelle, dans un rayon de 15 km autour du point latitude/longitude (WGS84) fourni
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 #critère de recherche sur l'activité opérationnelle
+&location.near-insee-code=44162|15|km #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
 <blockquote class="stu-note">
@@ -381,6 +433,18 @@ GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-A
   L'extension <a href="https://www.hl7.org/fhir/R4/extension-location-distance.html" target="_blank">location-distance</a> de <code>Bundle.entry.search</code> est utilisée par le ROR pour remonter, sur chaque <code>Location</code> incluse, sa distance calculée par rapport au point de référence de la recherche.
 </p>
 </blockquote>
+
+**Requête 2 expliquée (near) :**
+
+```sh
+GET [BASE]/HealthcareService?specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|013 #critère de recherche sur l'activité opérationnelle
+&location.near=47.21827323906432|-1.6369631507460436|15|km #critère de périmètre géographique – paramètre chainé – exemple : YY km autour du point de référence latitude et longitude dont le système de référence est WGS84 
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
 **Exemples de code :**
 
@@ -451,20 +515,56 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-localisation"></a>
 #### 3.6 Rechercher par département, code postal ou commune (location.address-postalcode, location.commune-cog)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite rechercher les offres proposant une activité opérationnelle sur un département (2 premiers chiffres du code postal), un ensemble de codes postaux, ou une (ou plusieurs) commune(s) précise(s) (chainage sur `location`).
+**Description du scénario :** Un consommateur recherche les offres ayant un type d'offre, un mode de prise en charge et une spécialisation de prise en charge, sur un département, ou un ensemble de département (code postal).
 
-**Requêtes :**
+**Exemple :** Recherche des offres caractérisées par le type d'offre "21 - Accueil ou hébergement pour personnes âgées dépendantes, sans spécificité » proposant un mode de prise en charge « 46 – Accueil de jour » et une spécialisation de prise en charge « 24 - Handicap à prédominance cognitive avec trouble du comportement (dont traumatisé crânien, syndrome de Korsakoff,...)» et située dans le département 71.
+
+**Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?location.address-postalcode=71&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21
-# recherche les offres du type d'offre 21 - Accueil ou hébergement pour personnes âgées dépendantes, situées dans le département 71
+GET [BASE]/HealthcareService?location.address-postalcode=71 # critère de recherche sur un département ou un ensemble de département (2 premier chiffres du code postal)
+&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|21 #critère sur le type d'offre
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|46 #critère de recherche sur le mode de prise en charge
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R245-SpecialisationDePriseEnCharge/FHIR/TRE-R245-SpecialisationDePriseEnCharge|24 #critère de recherche sur la spécialisation de prise en charge
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
-GET [BASE]/HealthcareService?_filter=(location.address-postalcode eq "60000" or "76620")&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017
-# recherche les offres caractérisées par l'activité opérationnelle 017 - Chirurgie de l'obésité, sur les communes de code postal 60000 ou 76620
+**Description du scénario :** Un consommateur recherche les offres proposant une activité opérationnelle particulière et un acte spécifique particulier sur une ville, ou un ensemble de villes (code postal).
 
-GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000,13013&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437
-# recherche les offres caractérisées par l'activité opérationnelle 437 - Médecine générale, sur les communes 18000 (Bourges) ou 13013 (Belcodène) (code officiel géographique)
+**Exemple :** Recherche des offres caractérisées par l'activité opérationnelle «017 – Chirurgie de l'obésité (bariatrique) » et proposant l'acte spécifique «0529 - Pose d'anneau gastrique » sur les communes dont le code postal est 60000 (Frocourt) ou 76620 (Le Havre).
+
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_filter=(location.address-postalcode eq "60000" or "76620") #critère de recherche sur une ville ou un ensemble de ville en rentrant le code postal 
+&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|017 #critère de recherche sur l'activité opérationnelle
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R210-ActeSpecifique/FHIR/TRE-R210-ActeSpecifique|0529 #critère de recherche sur l'acte spécifique
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
+**Description du scénario :** Un consommateur recherche les offres proposant une activité opérationnelle particulière et un mode de prise en charge particulier, sur une ville, ou un ensemble de villes (code commune).
+
+**Exemple :** Recherche des offres caractérisées par l'activité opérationnelle « 437 – médecine générale » et un mode de prise en charge « 032 – Consultation », sur les communes 18000 (Bourges) ou 13013 (Belcodène)
+
+**Requête 2 expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?location.commune-cog=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|18000,13013 #critere de recherche sur une ville ou un ensemble de ville via le code commune
+&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|437  #critère de recherche sur l'activité opérationnelle
+&characteristic=https://mos.esante.gouv.fr/NOS/TRE_R213-ModePriseEnCharge/FHIR/TRE-R213-ModePriseEnCharge|032  #critère de recherche sur le mode de prise en charge
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
 ```
 
 **Exemples de code :**
@@ -536,18 +636,39 @@ for entry in bundle.get("entry", []):
 
 <a id="recherche-par-zone-professionnel-region"></a>
 #### 3.7 Rechercher par zone d'intervention, professionnel ou région source (intervention-zone, _has, _tag)
-**Récit utilisateur :**
-En tant que client de l'API, je souhaite : rechercher les offres à domicile dont la zone d'intervention couvre une commune donnée ; retrouver les offres d'un professionnel identifié par son identifiant fonctionnel (chainage inversé) ; ou filtrer les offres par région source de la donnée.
+**Description du scénario :** Un consommateur cherche les offres ayant un type d'offre particulier et une activité opérationnelle particulière, dans une commune faisant partie d'une zone d'intervention.
 
-**Requêtes :**
+**Exemple :** Recherche des offres caractérisées par le type d'offre « 30 – Service d'aide et d'accompagnement à domicile (SAAD) », proposant une activité opérationnelle de type « 293 - Accompagnements pour accomplir les activités domestiques » et ayant la commune 29151 dans la zone d'intervention.
+
+**Requête expliquée :**
 
 ```sh
-GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30
-# recherche les offres de type SAAD, proposant l'activité opérationnelle 293, et ayant la commune 29151 dans leur zone d'intervention
+GET [BASE]/HealthcareService?intervention-zone=https://mos.esante.gouv.fr/NOS/TRE_R13-CommuneOM/FHIR/TRE-R13-CommuneOM|29151 #critère de recherche sur la commune faisant partie d'une zone d'intervention
+&service-category=https://mos.esante.gouv.fr/NOS/TRE_R244-CategorieOrganisation/FHIR/TRE-R244-CategorieOrganisation|30 #critère sur le type d'offre
+&specialty=https://mos.esante.gouv.fr/NOS/TRE_R211-ActiviteOperationnelle/FHIR/TRE-R211-ActiviteOperationnelle|293 #critère de recherche sur l'activité opérationnelle
+&_include=HealthcareService:organization #inclus les Organization référencées par Healthcare Service 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par Healthcare Service
+&_include=HealthcareService:location #inclus les Location référencées par Healthcare Service
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
 
-GET [BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX
-# recherche les offres (HealthcareService) auxquelles est rattaché, via une situation opérationnelle (PractitionerRole), le professionnel dont l'identifiant fonctionnel est XXX
+**Description du scénario :** Un consommateur cherche les offres d'un professionnel à partir de son identifiant fonctionnel = XXX.
 
+**Requête expliquée :**
+
+```sh
+GET [BASE]/HealthcareService?_has:PractitionerRole:service:practitioner.identifier=XXX #critère de recherche sur l'identifiant fonctionnel du professionnel (chainage)
+&_include=HealthcareService:organization #inclus les Organization référencées par HealthcareService 
+&_include:iterate=Organization:partof #inclus TOUTES (iterate) les Organization liées aux Organization référencées par HealthcareService
+&_include=HealthcareService:location #inclus les Location référencées par HealthcareService
+&_revinclude=PractitionerRole:service #inclus les PractitionerRole qui référencent le HealthcareService
+&_include=PractitionerRole:practitioner #inclus les Practitioner référencés par PractitionerRole
+```
+
+**Requête :**
+
+```sh
 GET [BASE]/HealthcareService?_tag=https://mos.esante.gouv.fr/NOS/TRE_R30-RegionOM/FHIR/TRE-R30-RegionOM|XX
 # recherche les offres dont la région source de la donnée est XX
 ```
