@@ -11,6 +11,7 @@ Le ROR (Répertoire national de l’Offre et des Ressources en santé et accompa
 
 Cette documentation rassemble le guide de prise en main de l'API FHIR, les modalités d'accès aux données (profils d'accès, environnements, authentification), ainsi que de nombreux exemples.
 
+<br />
 
 ## Les enjeux du ROR
 
@@ -21,6 +22,8 @@ Cette documentation rassemble le guide de prise en main de l'API FHIR, les modal
 - Optimiser la gestion des crises sanitaires notamment via le partage de disponilité des lits
 </div>
 
+<br />
+
 ## Dans quel cas se connecter au ROR ?
 
 <div class="wysiwyg" markdown="1">
@@ -30,9 +33,23 @@ Avoir pour finalité de renseigner la disponibilité en lits d’un ou plusieurs
 Fournir la liste exhaustive des établissements qui fournissent les informations sur la disponibilité en lits au ROR National
 </div>
 
+<br />
+
 ## Le parcours G_NIUS
 
-Avant d'aller plus loin dans cette documention, j'ai suivi le [parcours G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv.fr/fr/reussir-votre-connexion-au-ror-national) et je souhaite consommer les API FHIR du ROR en tant que consommateur ou fournisseur.
+Pour obtenir vos accès, vous effectuez le [parcours G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv.fr/fr/reussir-votre-connexion-au-ror-national)
+
+<div style="display: flex; justify-content: space-around;" class="m-5">
+<div markdown="1">
+[parcours G_NIUS ](https://gnius.esante.gouv.fr/fr/reussir-votre-connexion-au-ror-national){:class="btn  btn--style1"}
+</div>
+</div>
+
+<br />
+
+##
+
+ et je souhaite consommer les API FHIR du ROR en tant que consommateur ou fournisseur.
 
 
 <div style="display: flex; justify-content: space-around;" class="m-5">
