@@ -37,10 +37,10 @@ Avant d'aller plus loin dans cette documention, j'ai suivi le [parcours G_NIUS p
 
 <div style="display: flex; justify-content: space-around;" class="m-5">
 <div markdown="1">
-[API FHIR du Modèle d'Exposition V3](pages/guide/getting-started/introduction.html){:class="btn  btn--style1"}
+[API FHIR du Modèle d'Exposition V3](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
 </div>
 <!-- <div markdown="1">
-[API FHIR du Modèle d'Exposition V4](pages/guide/getting-started/introduction.html){:class="btn  btn--style1"}
+[API FHIR du Modèle d'Exposition V4](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
 </div> -->
 </div>
 
@@ -50,7 +50,7 @@ Avant d'aller plus loin dans cette documention, j'ai suivi le [parcours G_NIUS p
 
 <div class="row">
     <div class="col col-12 col-md-3">
-        <span class="doc-section-title"><a href="./pages/guide/modeleV3/getting-started/introduction.html">Guide : </a></span>
+        <span class="doc-section-title"><a href="./pages/guide/modeleV3/acces-donnees/vue-ensemble.html">Guide : </a></span>
         Découvrez le ROR National, sa modélisation et son API FHIR.
     </div>
     <div class="col col-12 col-md-3">

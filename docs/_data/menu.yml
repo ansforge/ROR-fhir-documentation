@@ -4,7 +4,7 @@ header:
   - title: Accueil
     url: /
   - title: Guide
-    url: /pages/guide/modeleV3/getting-started/introduction.html
+    url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
   - title: Modalités d'accès
     url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
   - title: Ressources FHIR
@@ -28,12 +28,6 @@ header:
 
 sidebar:
   guide:
-    - page: Démarrage rapide
-      url: /pages/guide/modeleV3/getting-started/introduction.html
-      title: Introduction
-      next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
-      next-title: Modalités d'accès aux données
-
     - page: Modalités d'accès aux données
       url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
       title: Modalités d'accès aux données
