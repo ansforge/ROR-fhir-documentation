@@ -33,7 +33,7 @@ Le guide d'implémentation FHIR complet (profils, StructureDefinition, ValueSets
 * Guide d'implémentation FHIR (IG officiel) : https://interop.esante.gouv.fr/ig/fhir/ror
 * Code source de l'IG : https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante
 * Répertoire ROR : https://esante.gouv.fr/produits-services/repertoire-ror
-* Météo des services : https://status.esante.gouv.fr/
+* Météo des services : https://status.ror.esante.gouv.fr/s
 
 ## Développement local
 

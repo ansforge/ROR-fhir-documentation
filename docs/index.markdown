@@ -37,7 +37,7 @@ Fournir la liste exhaustive des établissements qui fournissent les informations
 
 ## Le parcours G_NIUS
 
-Pour obtenir vos accès, vous effectuez le [parcours G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv.fr/fr/reussir-votre-connexion-au-ror-national)
+Vous parcourez [G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv.fr/fr/reussir-votre-connexion-au-ror-national) pour savoir si vous êtes un consommateur ou un fournisseur du ROR national et pour lancer les démarches pour obtenir vos accès.
 
 <div style="display: flex; justify-content: space-around;" class="m-5">
 <div markdown="1">
@@ -47,11 +47,34 @@ Pour obtenir vos accès, vous effectuez le [parcours G_NIUS pour réussir ma con
 
 <br />
 
-##
+## Vous savez si vous êtes un consommateur ou un fournisseur du ROR national
 
- et je souhaite consommer les API FHIR du ROR en tant que consommateur ou fournisseur.
+<div class="row">
+    <div class="border rounded col p-2 m-1">
+        <h3>Je suis un consommateur</h3>
+        <hr aria-hidden="true">
+        <div>
+            <div style="display: flex; justify-content: space-around;" class="m-5">
+            <div markdown="1">
+            [Démarrer](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
+            </div>
+            </div>           
+        </div>
+    </div>
+    <div class="border rounded col p-2 m-1">
+        <h3>Je suis un fournisseur</h3>
+        <hr aria-hidden="true">
+        <div>
+            <div style="display: flex; justify-content: space-around;" class="m-5">
+            <div markdown="1">
+            [Démarrer](todo){:class="btn  btn--style1"}
+            </div>
+            </div>           
+        </div>
+    </div>
+</div>
 
-
+<br />
 <div style="display: flex; justify-content: space-around;" class="m-5">
 <div markdown="1">
 [API FHIR du Modèle d'Exposition V3](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
@@ -63,7 +86,7 @@ Pour obtenir vos accès, vous effectuez le [parcours G_NIUS pour réussir ma con
 
 <br />
 
-## Aller plus loin
+## Pour aller plus loin
 
 <div class="row">
     <div class="col col-12 col-md-3">
