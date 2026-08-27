@@ -64,6 +64,10 @@ GET [BASE]/Location?status=active
 # limite le résultat aux lieux actifs
 ```
 
+<blockquote class="callout-warning">
+<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code> de FHIR. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
+</blockquote>
+
 **Exemples de code :**
 
 <div class="code-sample">

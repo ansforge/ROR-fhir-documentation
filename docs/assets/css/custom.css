@@ -10,3 +10,13 @@
   padding: 0.6rem 1rem;
   width: 100%;
 }
+
+.callout-warning {
+  background-color: #fff7e6;
+  border-left: 4px solid #e69215;
+  padding: 0.75rem 1.25rem;
+  margin: 1rem 0;
+}
+.callout-warning p {
+  margin: 0;
+}
