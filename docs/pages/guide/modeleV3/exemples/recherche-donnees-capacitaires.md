@@ -82,8 +82,8 @@ Plus de précision sur la spécification FHIR :
 ### Critères de recherche
 
   Les critères de recherche applicables sont définis sur la page dédiée pour :
--    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/search-params/healthcareservice.html' | relative_url }})
--    [StructureDefinition-ror-location]({{ '/pages/guide/modeleV3/resources/search-params/location.html' | relative_url }}) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
+-    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/healthcare-service.html#parametres-recherche' | relative_url }})
+-    [StructureDefinition-ror-location]({{ '/pages/guide/modeleV3/resources/location.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `location.[NOM CRITERE]`)
 -    [StructureDefinition-ror-task]({{ '/pages/guide/modeleV3/resources/search-params/task.html' | relative_url }}) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage inversé](https://www.hl7.org/fhir/R4/search.html#has). Pour cela utiliser la syntaxe suivante : `_has:HealthcareService:focus:[NOM CRITERE]`)
 
 **En complément, vous pouvez accéder aux Capability Statements [ici]({{ site.ror.ig_url }}/artifacts.html#behavior-capability-statements)**

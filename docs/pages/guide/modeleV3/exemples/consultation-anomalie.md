@@ -80,11 +80,11 @@ Plus de précision sur la spécification FHIR :
 
   Les critères de recherche applicables sont définis sur la page dédiée pour :
 -    [StructureDefinition-ror-task]({{ '/pages/guide/modeleV3/resources/search-params/task.html' | relative_url }})
--    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/search-params/healthcareservice.html' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:HealthcareService:[NOM CRITERE]`)
--    [Structuredefinition-ror-organization]({{ '/pages/guide/modeleV3/resources/search-params/organization.html' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Organization:[NOM CRITERE]`)
--    [StructureDefinition-ror-location]({{ '/pages/guide/modeleV3/resources/search-params/location.html' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Location:[NOM CRITERE]`)
--    [StructureDefinition-ror-practioner]({{ '/pages/guide/modeleV3/resources/search-params/practitioner.html' | relative_url }}) (critères de recherche applicables à la ressource ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Practitioner:[NOM CRITERE]`)
--    [StructureDefinition-ror-practionerrole]({{ '/pages/guide/modeleV3/resources/search-params/practitionerrole.html' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:PractitionerRole:[NOM CRITERE]`)
+-    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/healthcare-service.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:HealthcareService:[NOM CRITERE]`)
+-    [Structuredefinition-ror-organization]({{ '/pages/guide/modeleV3/resources/organization.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Organization:[NOM CRITERE]`)
+-    [StructureDefinition-ror-location]({{ '/pages/guide/modeleV3/resources/location.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Location:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practioner]({{ '/pages/guide/modeleV3/resources/practitioner.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Practitioner:[NOM CRITERE]`)
+-    [StructureDefinition-ror-practionerrole]({{ '/pages/guide/modeleV3/resources/practitioner-role.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:PractitionerRole:[NOM CRITERE]`)
 
 **En complément, vous pouvez accéder aux Capability Statements [ici]({{ site.ror.ig_url }}/artifacts.html#behavior-capability-statements)**
 

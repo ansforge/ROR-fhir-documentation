@@ -77,8 +77,8 @@ Remarque : l'échec d'une recherche est la non-possibilité d'exécuter la requ�
 ### Critères de recherche
 
   Les critères de recherche applicables sont définis sur la page dédiée pour :
--    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/search-params/healthcareservice.html' | relative_url }})
--    [Structuredefinition-ror-organization]({{ '/pages/guide/modeleV3/resources/search-params/organization.html' | relative_url }}) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
+-    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/healthcare-service.html#parametres-recherche' | relative_url }})
+-    [Structuredefinition-ror-organization]({{ '/pages/guide/modeleV3/resources/organization.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource HealthcareService, grâce au [chainage](https://www.hl7.org/fhir/R4/search.html#chaining). Pour cela utiliser la syntaxesuivante : `organization.[NOM CRITERE]`)
 
 **En complément, vous pouvez accéder aux Capability Statements [ici]({{ site.ror.ig_url }}/artifacts.html#behavior-capability-statements)**
 
