@@ -1,8 +1,8 @@
 ---
 layout: menu-guide
-section: scenarios
+section: exemples
 title: Saisie de l'offre
-subTitle: Scénarios
+subTitle: Exemples
 ---
 
 ###  Construction de la requête de base

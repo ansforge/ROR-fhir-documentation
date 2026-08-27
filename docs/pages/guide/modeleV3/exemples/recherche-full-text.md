@@ -1,8 +1,8 @@
 ---
 layout: menu-guide
-section: scenarios
+section: exemples
 title: Recherche d'offre via une technique « Full text »
-subTitle: Scénarios
+subTitle: Exemples
 ---
 
 <code><span style="color: #ff0000;font-weight:bold;font-size: x-large;">draft</span></code>

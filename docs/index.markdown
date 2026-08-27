@@ -58,7 +58,7 @@ Avant d'aller plus loin dans cette documention, j'ai suivi le [parcours G_NIUS p
         Profils d'accès, environnements, authentification OAuth2/mTLS et headers requis.
     </div>
     <div class="col col-12 col-md-3">
-        <span class="doc-section-title"><a href="./pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html">Scénarios : </a></span>
+        <span class="doc-section-title"><a href="./pages/guide/modeleV3/exemples/consultation-donnees-capacitaires.html">Scénarios : </a></span>
         Scénarios détaillés de recherche, d'extraction, de saisie et de mise à jour de l'offre.
     </div>
     <div class="col col-12 col-md-3">

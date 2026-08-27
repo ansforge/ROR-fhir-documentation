@@ -22,7 +22,7 @@ Les valeurs de ces 4 headers sont transmises à l'éditeur en même temps que le
 
 ## Description des API FHIR
 
-Les API FHIR sont décrites en détail dans les [spécifications techniques]({{ '/pages/guide/modeleV3/scenarios/consultation-donnees-capacitaires.html' | relative_url }}) de cette documentation, ainsi que sur le [guide d'implémentation officiel]({{ site.ror.ig_url }}/specifications_techniques_1.html).
+Les API FHIR sont décrites en détail dans les [spécifications techniques]({{ '/pages/guide/modeleV3/exemples/consultation-donnees-capacitaires.html' | relative_url }}) de cette documentation, ainsi que sur le [guide d'implémentation officiel]({{ site.ror.ig_url }}/specifications_techniques_1.html).
 
 Par exemple, pour la **consultation de l'offre**, remplacer `[BASE]` par la base de l'URL des API FHIR décrite sur la page [Environnements et endpoints]({{ '/pages/guide/modeleV3/acces-donnees/environnements-endpoints.html' | relative_url }}) :
 

@@ -1,8 +1,8 @@
 ---
 layout: menu-guide
-section: scenarios
+section: exemples
 title: Recherche d'offre sur la base d'informations tarifaires
-subTitle: Scénarios
+subTitle: Exemples
 ---
 
 ###  Construction de la requête de base

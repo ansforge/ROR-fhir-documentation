@@ -1,8 +1,8 @@
 ---
 layout: menu-guide
-section: scenarios
+section: exemples
 title: Signalement d'anomalie
-subTitle: Scénarios
+subTitle: Exemples
 ---
 
 ### Construction de la requête de base
