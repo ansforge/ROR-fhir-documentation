@@ -27,33 +27,8 @@ sidebar:
     - page: Introduction
       url: /pages/guide/modeleV3/introduction.html
       title: Introduction
-      next-url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
-      next-title: Méthodes HTTP et codes d'erreur
-
-    - page: Intégration FHIR
-      url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
-      title: Intégration FHIR
-      subfolderitems:
-        - page: Méthodes HTTP et codes d'erreur
-          url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
-          title: Méthodes HTTP et codes d'erreur
-          next-url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
-          next-title: Utilisation de C#
-        - page: Utilisation de C#
-          url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
-          title: Utilisation de C#
-          next-url: /pages/guide/modeleV3/integration-fhir/integration-java.html
-          next-title: Utilisation de Java
-        - page: Utilisation de Java
-          url: /pages/guide/modeleV3/integration-fhir/integration-java.html
-          title: Utilisation de Java
-          next-url: /pages/guide/modeleV3/integration-fhir/integration-python.html
-          next-title: Utilisation de Python
-        - page: Utilisation de Python
-          url: /pages/guide/modeleV3/integration-fhir/integration-python.html
-          title: Utilisation de Python
-          next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
-          next-title: Vue d'ensemble
+      next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
+      next-title: Vue d'ensemble
 
     - page: Modalités d'accès aux données
       url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
@@ -82,6 +57,33 @@ sidebar:
         - page: Exemple cURL complet
           url: /pages/guide/modeleV3/acces-donnees/exemple-curl.html
           title: Exemple cURL complet
+          next-url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
+          next-title: Méthodes HTTP et codes d'erreur
+
+    - page: Intégration FHIR
+      url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
+      title: Intégration FHIR
+      subfolderitems:
+        - page: Méthodes HTTP et codes d'erreur
+          url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
+          title: Méthodes HTTP et codes d'erreur
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+          next-title: Utilisation de C#
+        - page: Utilisation de C#
+          url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+          title: Utilisation de C#
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-java.html
+          next-title: Utilisation de Java
+        - page: Utilisation de Java
+          url: /pages/guide/modeleV3/integration-fhir/integration-java.html
+          title: Utilisation de Java
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-python.html
+          next-title: Utilisation de Python
+        - page: Utilisation de Python
+          url: /pages/guide/modeleV3/integration-fhir/integration-python.html
+          title: Utilisation de Python
+          next-url: /pages/guide/modeleV3/resources/practitioner.html
+          next-title: RORPractitioner
 
     - page: Ressources FHIR
       url: /pages/guide/modeleV3/resources/practitioner.html
