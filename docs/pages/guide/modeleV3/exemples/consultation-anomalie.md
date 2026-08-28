@@ -79,7 +79,7 @@ Plus de précision sur la spécification FHIR :
 ### Critères de recherche
 
   Les critères de recherche applicables sont définis sur la page dédiée pour :
--    [StructureDefinition-ror-task]({{ '/pages/guide/modeleV3/resources/search-params/task.html' | relative_url }})
+-    [StructureDefinition-ror-task]({{ '/pages/guide/modeleV3/resources/task.html#parametres-recherche' | relative_url }})
 -    [StructureDefinition-ror-healthcareservice]({{ '/pages/guide/modeleV3/resources/healthcare-service.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:HealthcareService:[NOM CRITERE]`)
 -    [Structuredefinition-ror-organization]({{ '/pages/guide/modeleV3/resources/organization.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Organization:[NOM CRITERE]`)
 -    [StructureDefinition-ror-location]({{ '/pages/guide/modeleV3/resources/location.html#parametres-recherche' | relative_url }}) (critères de recherche applicables à la ressource Task, grâce au chainage. Pour cela utiliser la syntaxe suivante : `focus:Location:[NOM CRITERE]`)

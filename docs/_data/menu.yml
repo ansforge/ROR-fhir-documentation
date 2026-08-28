@@ -104,16 +104,12 @@ sidebar:
         - page: RORPractitionerRole
           url: /pages/guide/modeleV3/resources/practitioner-role.html
           title: RORPractitionerRole
-        - page: Paramètres de recherche (autres ressources)
-          url: /pages/guide/modeleV3/resources/search-params/task.html
-          title: Paramètres de recherche (autres ressources)
-          subfolderitems:
-            - page: RORTask
-              url: /pages/guide/modeleV3/resources/search-params/task.html
-              title: RORTask
-            - page: RORQuestionnaire
-              url: /pages/guide/modeleV3/resources/search-params/questionnaire.html
-              title: RORQuestionnaire
+        - page: RORTask
+          url: /pages/guide/modeleV3/resources/task.html
+          title: RORTask
+        - page: RORQuestionnaire
+          url: /pages/guide/modeleV3/resources/questionnaire.html
+          title: RORQuestionnaire
 
     - page: GET
       url: /pages/guide/modeleV3/get/healthcare-service.html
@@ -134,6 +130,12 @@ sidebar:
         - page: RORPractitionerRole
           url: /pages/guide/modeleV3/get/practitioner-role.html
           title: RORPractitionerRole
+        - page: RORTask
+          url: /pages/guide/modeleV3/get/task.html
+          title: RORTask
+        - page: RORQuestionnaire
+          url: /pages/guide/modeleV3/get/questionnaire.html
+          title: RORQuestionnaire
 
     - page: Méthodes FHIR
       url: /pages/guide/modeleV3/methodes-fhir/export.html
