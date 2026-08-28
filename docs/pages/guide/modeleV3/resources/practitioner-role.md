@@ -40,6 +40,10 @@ Un même professionnel peut être décrit par plusieurs instances `RORPractition
 ## 3. Recherche sur critères
 Voici quelques exemples de requêtes sur les situations opérationnelles / exercices professionnels.
 
+<blockquote class="callout-warning">
+<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code> de FHIR. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
+</blockquote>
+
 <a id="recherche-tout"></a>
 #### 3.1 Rechercher tout (sans critère)
 **Description du scénario :** Un consommateur souhaite récupérer l'ensemble des situations opérationnelles, actives et inactives.
@@ -58,10 +62,6 @@ GET [BASE]/PractitionerRole
 GET [BASE]/PractitionerRole?_include=PractitionerRole:practitioner #inclus le Practitioner référencé par la situation opérationnelle
 &_include=PractitionerRole:organization #inclus l'Organization ou le HealthcareService référencé par la situation opérationnelle
 ```
-
-<blockquote class="callout-warning">
-<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code> de FHIR. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
-</blockquote>
 
 **Exemples de code :**
 
