@@ -20,3 +20,18 @@
 .callout-warning p {
   margin: 0;
 }
+
+/* Le bandeau d'en-tête (.header-principal) est en position sticky (top:0) et
+   masque le haut de la page lors d'un saut d'ancre (clic sur un lien #...).
+   On décale le point de calage du scroll de la hauteur du bandeau (définie
+   par le thème via --header-min-height, 7.8rem puis 10.6rem à partir de 75em),
+   avec une marge de respiration. */
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], a[id] {
+  scroll-margin-top: 9rem;
+}
+
+@media (min-width: 75em) {
+  h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], a[id] {
+    scroll-margin-top: 12rem;
+  }
+}
