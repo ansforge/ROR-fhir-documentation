@@ -14,7 +14,6 @@ Ce site dédié à l'API FHIR du ROR (Répertoire national de l'Offre et des Res
 Ce site s'appuie sur le [guide d'implémentation FHIR officiel du ROR]({{ site.ror.ig_url }}){:target="_blank"}, qui se réfère au modèle d'exposition 3 du ROR.
 
 Dans ce guide, vous retrouverez des indicateurs permettant d'identifier la maturité de certains éléments ou de certaines sections :
-
 <div class="wysiwyg" markdown="1">
 - <code><span style="color: #E67E22;">deprecated</span></code> : correspond à ce qui ne sera bientôt plus disponible dans la solution ROR National.
 - <code><span style="color: #ff0000;">draft</span></code> : correspond à ce qui est en cours d'implémentation dans la solution ROR National et donc pas encore validé et disponible. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est en cours d'implémentation dans la solution ROR National.
@@ -24,11 +23,10 @@ Dans ce guide, vous retrouverez des indicateurs permettant d'identifier la matur
 Les autres éléments ou sections qui n'ont pas ces mentions sont  disponibles dans la version courante de la solution du ROR National.
 
 Toutes les API ne sont pas consommables par les éditeurs:
-
 <div class="wysiwyg" markdown="1">
 - <code><span style="color: #22ffd3;">serveur</span></code> : correspond aux API qui ne sont pas ouvertes aux éditeurs.
 </div>
-
+<br/>
 ### Le standard FHIR
 
 FHIR est un standard d'interopérabilité conçu pour l'échange de données de santé entre les différents acteurs de l'écosystème de Santé, développé par HL7 (Health Level 7). Le standard FHIR est de plus en plus utilisé en France et son usage est poussé par l'Union Européenne.
@@ -53,9 +51,8 @@ Les 5 ressources disponibles sur l'API FHIR du ROR sont les suivantes :
 | [ROROrganization]({{ '/pages/guide/modeleV3/resources/organization.html' | relative_url }}) | Décrit les organismes du domaine sanitaire, médico-social et social (entités juridiques, entités géographiques, organisations internes). |
 | [RORHealthcareService]({{ '/pages/guide/modeleV3/resources/healthcare-service.html' | relative_url }}) | Décrit l'offre opérationnelle portée par une organisation : activité opérationnelle, actes spécifiques, patientèle, mode de prise en charge. |
 | [RORLocation]({{ '/pages/guide/modeleV3/resources/location.html' | relative_url }}) | Décrit les lieux de réalisation de l'offre, y compris leurs données capacitaires (disponibilité en lits et places). |
-
 </div>
-
+<br />
 ### Météo des services du ROR
 
 Il est possible de consulter la page [Météo des services](https://status.ror.esante.gouv.fr/){:target="_blank"} afin de vérifier si l'API FHIR du ROR est opérationnelle ou non.

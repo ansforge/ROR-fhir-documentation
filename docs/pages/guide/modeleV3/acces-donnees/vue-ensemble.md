@@ -6,12 +6,12 @@ subTitle: Modalités d'accès aux données
 ---
 
 Cette section décrit la consommation du modèle d'exposition V3.0 du ROR via les API FHIR, c'est-à-dire :
-
 <div class="wysiwyg" markdown="1">
 - Les environnements disponibles : le « bac-à-sable » pour les tests, puis la production ;
 - L'authentification OAuth2 / mTLS ;
 - La consommation des API FHIR.
 </div>
+<br />
 
 ## Modélisation des données
 
@@ -43,7 +43,7 @@ Le guide d'implémentation FHIR est disponible sur [interop.esante.gouv.fr/ig/fh
 
 </div>
 
-Ces correspondances sont détaillées dans [Ref_03] — voir le [guide d'implémentation officiel]({{ site.ror.ig_url }}).
+Ces correspondances sont détaillées dans le [guide d'implémentation FHIR]({{ site.ror.ig_url }}).
 
 ## Politique d'accès aux données
 

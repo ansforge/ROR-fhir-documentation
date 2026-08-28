@@ -30,9 +30,9 @@ sidebar:
       next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
       next-title: Vue d'ensemble
 
-    - page: Modalités d'accès aux données
+    - page: Modalités d'accès
       url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
-      title: Modalités d'accès aux données
+      title: Modalités d'accès
       subfolderitems:
         - page: Vue d'ensemble
           url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
@@ -82,11 +82,11 @@ sidebar:
         - page: Utilisation de Python
           url: /pages/guide/modeleV3/integration-fhir/integration-python.html
           title: Utilisation de Python
-          next-url: /pages/guide/modeleV3/resources/practitioner.html
-          next-title: RORPractitioner
+          next-url: /pages/guide/modeleV3/resources/healthcare-service.html
+          next-title: RORHealthcareService
 
     - page: Ressources FHIR
-      url: /pages/guide/modeleV3/resources/practitioner.html
+      url: /pages/guide/modeleV3/resources/healthcare-service.html
       title: Ressources FHIR
       subfolderitems:
         - page: RORHealthcareService
