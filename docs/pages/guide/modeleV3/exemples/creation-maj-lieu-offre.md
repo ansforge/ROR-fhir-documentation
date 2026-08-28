@@ -86,9 +86,7 @@ Piste pour une implémentation future dans le ROR: la gestion des accès concurr
 </p>
 </blockquote>
 
-#### [spécifique serveur] Scénario 1 : Ajout d'un lieu de réalisation de l'offre 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 1 : Ajout d'un lieu de réalisation de l'offre
 
 **Description du scénario :** Un établissement ajoute dans un établissement (EG) existant, un lieu de réalisation de l\'offre de fonction \"001 \| hébergement\", associé à une offre opérationnelle existante dont l'identifiant est XXX, dans la communeCog de Versailles, avec une adresse 7 rue porte de Buc, 78000 Versailles.
 
@@ -480,9 +478,7 @@ PATCH [BASE]/Location?identifier=XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 4 : Mise à jour de l'adresse du lieu de réalisation de l'offre
 
 **Description du scénario :** Un établissement modifie le numéro de voie de l'adresse (nouvelle valeur : YYY) du lieu de réalisation de l'offre dont l'identifiant est XXX.
 
@@ -522,9 +518,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 5 : Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre
 
 **Description du scénario :** Ajout d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
@@ -633,9 +627,7 @@ PATCH [BASE]/Location/XXX
 } 
 ```
 
-#### [spécifique serveur] Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 6 : Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre
 
 **Description du scénario :** Modification de la quantité d'équipements spécifiques dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 3, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 300 kg.
 
@@ -666,9 +658,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 7 : Suppression d'un équipement spécifique dans un lieu de réalisation de l'offre
 
 **Description du scénario :** Un établissement indique qu'il ne dispose plus de l'échographe 3D, il modifie le nombre d'équipement en service : 030 \| Echographe 3D, nb en service : 0, aucune limite équipement associée.
 
@@ -699,9 +689,7 @@ PATCH [BASE]/Location/XXX
 }
 ```
 
-#### [spécifique serveur] Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 8 : Modification de la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre
 
 **Description du scénario :** Un établissement modifie la valeur limite d'un équipement spécifique dans un lieu de réalisation de l'offre dont l'identifiant est XXX : 089 \| lit d\'hospitalisation obésité (poids entre 250 et 350 kg) - bariatrique, nb en service : 2, limite caractéristique équipement : 001 \| poids maximum, valeur limite = 280 kg.
 

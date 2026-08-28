@@ -76,9 +76,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Création de l'entité juridique
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 1 : Création de l'entité juridique
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité juridique. 
 
@@ -177,9 +175,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Création de l'entité géographique
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 2 : Création de l'entité géographique
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
@@ -352,9 +348,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
 
@@ -740,9 +734,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Création d'un pôle
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 4 : Création d'un pôle
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
@@ -799,9 +791,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 5 : Création d'un service
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 5 : Création d'un service
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
@@ -858,9 +848,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 6 : Création d'une unité fonctionnelle
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 6 : Création d'une unité fonctionnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
@@ -917,9 +905,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
@@ -1238,9 +1224,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 8 : Création d'une offre opérationnelle de ville
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 8 : Création d'une offre opérationnelle de ville
 
 **Description du scénario :** A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
 
@@ -1526,9 +1510,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### [spécifique serveur] Scénario 9 : Création d'un professionnel
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 9 : Création d'un professionnel
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute un professionnel.
 
@@ -1598,9 +1580,7 @@ POST [BASE]/Practitioner
 }
 ```
 
-#### [spécifique serveur] Scénario 10 : Création d'une situation opérationnelle
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 10 : Création d'une situation opérationnelle
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 

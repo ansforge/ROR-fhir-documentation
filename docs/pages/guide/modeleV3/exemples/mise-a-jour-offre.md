@@ -82,9 +82,7 @@ Si la mise à jour échoue, le serveur doit répondre:
 
 ### Exemple de requêtes
 
-#### [spécifique serveur] Scénario 1 : Modification d'une entité juridique 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 1 : Modification d'une entité juridique
 
 **Description du scénario :** Une entité juridique enregistre un changement d'adresse.
 
@@ -147,9 +145,7 @@ PATCH [BASE]/Organization/1234
 }
 ```
 
-#### [spécifique serveur] Scénario 2 : Modification d'une entité géographique 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 2 : Modification d'une entité géographique
 
 **Description du scénario :** Une entité géographique enregistre un changement de numéro de téléphone (passage de 01.01.01.02.01 à 01.01.01.02.02) et ajoute un contact (GREDIN Thierry).
 
@@ -282,9 +278,7 @@ PATCH [BASE]/Organization/4569
 }
 ```
 
-#### [spécifique serveur] Scénario 3 : Modification d'une organisation interne 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 3 : Modification d'une organisation interne
 
 **Description du scénario :** Un établissement sanitaire modifie le nom d'un service.
 
@@ -322,9 +316,7 @@ PATCH [BASE]/Organization/789
 }
 ```
 
-#### [spécifique serveur] Scénario 4 : Modification d'informations sur un professionnel 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 4 : Modification d'informations sur un professionnel
 
 **Description du scénario :** L'annuaire modifie les informations concernant un professionnel, l'adossement ROR national modifie les informations du professionnel.
 
@@ -419,9 +411,7 @@ PATCH [BASE]/Practitioner/159
 }
 ```
 
-#### [spécifique serveur] Scénario 5 : Modification d'informations sur une situation opérationnelle <code><span style="color: #ff0000;">draft</span></code>
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> <code><span style="color: #ff0000;">draft</span></code> Scénario 5 : Modification d'informations sur une situation opérationnelle
 
 **Description du scénario :** L'annuaire enrichit le savoir faire d'un professionnel de santé, l'adossement du ROR national modifie les informations de la situation opérationnelle.
 
@@ -492,9 +482,7 @@ PATCH [BASE]/PractitionerRole/753
 }
 ```
 
-#### [spécifique serveur] Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique) 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 6 : Modification d'une offre opérationnelle (Ajout d'un acte spécifique)
 
 **Description du scénario :** Un établissement ajoute un acte spécifique dans une offre opérationnelle déjà décrite au sein d'une structure.
 
@@ -538,9 +526,7 @@ PATCH [BASE]/HealthcareService/741
 }
 ```
 
-#### [spécifique serveur] Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle) 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 7 : Modification d'une offre opérationnelle (Retrait d'une activité opérationnelle)
 
 **Description du scénario :** Un établissement retire une activité opérationnelle au sein d'une offre opérationnelle déjà décrite au sein d'une structure.
 
@@ -584,9 +570,7 @@ PATCH [BASE]/HealthcareService/852
 }
 ```
 
-#### [spécifique serveur] Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville) 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 8 : Modification d'une offre opérationnelle (Précision sur l'offre opérationnelle d'un cabinet de ville)
 
 **Description du scénario :** Un professionnel de santé précise son offre opérationnelle et ajoute des valeurs d'activité opérationnelle et d'acte spécifique.
 
@@ -781,17 +765,13 @@ PATCH [BASE]/HealthcareService/963
 }
 ```
 
-#### [spécifique serveur] Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé) 
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 9 : Modification d'une offre opérationnelle (Rattachement d'un professionnel de santé)
 
 **Description du scénario :** Pour enregistrer le rattachement d'un professionnel de santé, une maison de santé pluriprofessionnelle crée une situation opérationnelle.
 
 **Requête :** Voir [scénario 10 du cas d'usage saisie de l'offre]({{ '/pages/guide/modeleV3/exemples/saisie-offre.html' | relative_url }}#spécifique-serveur-scénario-10-création-dune-situation-opérationnelle) (Création d'une situation opérationnelle)
 
-#### [spécifique serveur] Scénario 10 : Modification de multiples informations sur une offre
-
-*Cette requête ne pourra être exécutée que par le serveur.*
+#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 10 : Modification de multiples informations sur une offre
 
 **Description du scénario :** Un utilisateur ajoute une activité opérationnelle, un acte spécifique, un contact avec son numéro et modifie ses horaires.
 
