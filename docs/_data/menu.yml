@@ -27,8 +27,28 @@ sidebar:
     - page: Introduction
       url: /pages/guide/modeleV3/introduction.html
       title: Introduction
-      next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
-      next-title: Vue d'ensemble
+      next-url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+      next-title: Utilisation de C#
+
+    - page: Intégration FHIR
+      url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+      title: Intégration FHIR
+      subfolderitems:
+        - page: Utilisation de C#
+          url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+          title: Utilisation de C#
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-java.html
+          next-title: Utilisation de Java
+        - page: Utilisation de Java
+          url: /pages/guide/modeleV3/integration-fhir/integration-java.html
+          title: Utilisation de Java
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-python.html
+          next-title: Utilisation de Python
+        - page: Utilisation de Python
+          url: /pages/guide/modeleV3/integration-fhir/integration-python.html
+          title: Utilisation de Python
+          next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
+          next-title: Vue d'ensemble
 
     - page: Modalités d'accès aux données
       url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
