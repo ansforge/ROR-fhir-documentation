@@ -2,7 +2,7 @@
 layout: menu-guide
 section: guide
 title: RORPractitioner
-subTitle: GET
+subTitle: Exemples GET
 ---
 
 Cette page présente des exemples de requêtes `GET` sur la ressource [RORPractitioner]({{ '/pages/guide/modeleV3/resources/practitioner.html' | relative_url }}). Pour la présentation de la ressource et ses caractéristiques techniques, voir cette même page.

@@ -2,7 +2,7 @@
 layout: menu-guide
 section: guide
 title: ROROrganization
-subTitle: GET
+subTitle: Exemples GET
 ---
 
 Cette page présente des exemples de requêtes `GET` sur la ressource [ROROrganization]({{ '/pages/guide/modeleV3/resources/organization.html' | relative_url }}). Pour la présentation de la ressource et ses caractéristiques techniques, voir cette même page.
