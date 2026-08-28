@@ -6,7 +6,8 @@ title: Bienvenue sur la documentation de l'API FHIR du ROR
 <div class="figure" style="text-align: center;">
     <img src="{{ '/assets/img/pagecontent/ror-logo.png' | relative_url }}" alt="ROR" title="Logo du ROR" style="max-width:320px;width:100%;">
 </div>
-
+<br />
+<br />
 Le ROR (Répertoire national de l’Offre et des Ressources en santé et accompagnement médico-social) centralise la description de l’offre de Santé des établissements sanitaires (MCO, SSR, PSY), des structures de ville (cabinets libéraux, maisons de santé, centres de santé) ainsi que des établissements et services en charge des personnes âgées en perte d’autonomie et des personnes en situation de handicap. Il centralise également la disponibilité en lits et places.
 
 Cette documentation rassemble le guide de prise en main de l'API FHIR, les modalités d'accès aux données (profils d'accès, environnements, authentification), ainsi que de nombreux exemples.
@@ -71,15 +72,6 @@ Vous parcourez [G_NIUS pour réussir ma connexion ROR](https://gnius.esante.gouv
 
 </div>
 
-<br />
-<div style="display: flex; justify-content: space-around;" class="m-5">
-<div markdown="1">
-[API FHIR du Modèle d'Exposition V3](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
-</div>
-<!-- <div markdown="1">
-[API FHIR du Modèle d'Exposition V4](pages/guide/modeleV3/acces-donnees/vue-ensemble.html){:class="btn  btn--style1"}
-</div> -->
-</div>
 
 <br />
 

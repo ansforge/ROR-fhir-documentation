@@ -58,5 +58,5 @@ Les 5 ressources disponibles sur l'API FHIR du ROR sont les suivantes :
 
 ### Météo des services du ROR
 
-Il est possible de consulter la page [Météo des services](https://status.esante.gouv.fr){:target="_blank"} afin de vérifier si l'API FHIR du ROR est opérationnelle ou non.
+Il est possible de consulter la page [Météo des services](https://status.ror.esante.gouv.fr/){:target="_blank"} afin de vérifier si l'API FHIR du ROR est opérationnelle ou non.
 Il est également possible de s'abonner, depuis cette page, pour être notifié lorsque le statut de l'API FHIR du ROR est mis à jour.

@@ -5,7 +5,7 @@ title: Méthodes HTTP et codes d'erreur
 subTitle: Intégration FHIR
 ---
 
-FHIR est un standard qui s'appuie sur les principes REST : chaque ressource est accessible via une URL dédiée (`[BASE]/[Ressource]/[id]`) et manipulée à l'aide des méthodes HTTP standards. L'API FHIR du ROR n'introduit pas de méthode ou de code retour propriétaire : elle respecte le [modèle RESTful de la spécification FHIR](https://hl7.org/fhir/R4/http.html){:target="_blank"}.
+FHIR est un standard qui s'appuie sur les principes REST : chaque ressource est accessible via une URL dédiée (`[BASE]/[Ressource]/[id]`) et manipulée à l'aide des méthodes HTTP standards. L'API FHIR du ROR respecte le [modèle RESTful de la spécification FHIR](https://hl7.org/fhir/R4/http.html){:target="_blank"}.
 
 <a id="methodes-http"></a>
 ### Méthodes HTTP
