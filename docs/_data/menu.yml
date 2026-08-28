@@ -27,13 +27,18 @@ sidebar:
     - page: Introduction
       url: /pages/guide/modeleV3/introduction.html
       title: Introduction
-      next-url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
-      next-title: Utilisation de C#
+      next-url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
+      next-title: Méthodes HTTP et codes d'erreur
 
     - page: Intégration FHIR
-      url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+      url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
       title: Intégration FHIR
       subfolderitems:
+        - page: Méthodes HTTP et codes d'erreur
+          url: /pages/guide/modeleV3/integration-fhir/methodes-http.html
+          title: Méthodes HTTP et codes d'erreur
+          next-url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
+          next-title: Utilisation de C#
         - page: Utilisation de C#
           url: /pages/guide/modeleV3/integration-fhir/integration-dotnet.html
           title: Utilisation de C#
