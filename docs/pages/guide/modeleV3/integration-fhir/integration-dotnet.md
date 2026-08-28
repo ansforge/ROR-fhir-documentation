@@ -15,6 +15,7 @@ Dans nos différents exemples, nous utilisons la librairie développée par Fire
 </p>
 </blockquote>
 
+<a id="dependance"></a>
 ### Dépendance
 
 Ajoutez la dépendance Hl7.Fhir.R4 à votre projet. Nous choisissons la version R4 car l'API du ROR est basée sur FHIR R4.
@@ -25,6 +26,7 @@ dotnet add package Hl7.Fhir.R4 --version 4.3.0
 
 &nbsp;
 
+<a id="configuration-client"></a>
 ### Configuration du client HTTP FHIR
 
 Par rapport à l'utilisation de base du client FHIR, nous spécifions un `HttpClientHandler` afin d'ajouter le jeton d'accès (`Authorization`) ainsi que les 4 headers `Ror-*` requis par l'API du ROR (voir la page [Consommation des API FHIR]({{ '/pages/guide/modeleV3/acces-donnees/consommation-api.html' | relative_url }})).

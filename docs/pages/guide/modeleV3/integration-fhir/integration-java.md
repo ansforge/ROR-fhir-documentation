@@ -15,6 +15,7 @@ Dans nos différents exemples, nous utilisons Maven et la librairie HAPI FHIR. F
 </p>
 </blockquote>
 
+<a id="dependances-maven"></a>
 ### Dépendances Maven
 
 Pour l'exemple, le projet est un projet Java Maven. Nous utilisons la librairie [HAPI FHIR](https://hapifhir.io/){:target="_blank"} qui permet de structurer les données.
@@ -58,6 +59,7 @@ Pour utiliser les librairies HAPI, nous allons ajouter les dépendances suivante
 
 &nbsp;
 
+<a id="configuration-client"></a>
 ### Configuration du client HTTP FHIR avec HAPI
 
 Par rapport à l'utilisation de base du client HAPI, nous spécifions un intercepteur afin d'ajouter le jeton d'accès (`Authorization`) ainsi que les 4 headers `Ror-*` requis par l'API du ROR (voir la page [Consommation des API FHIR]({{ '/pages/guide/modeleV3/acces-donnees/consommation-api.html' | relative_url }})).

@@ -15,6 +15,7 @@ Dans nos différents exemples, nous utilisons pip et la librairie fhir.resources
 </p>
 </blockquote>
 
+<a id="dependances-python"></a>
 ### Dépendances Python
 
 Pour l'exemple, le projet est un projet Python utilisant pip pour la gestion des dépendances. Nous utilisons la librairie [fhir.resources](https://pypi.org/project/fhir.resources/){:target="_blank"} qui permet de structurer les données, ainsi que la librairie `requests` pour effectuer les appels HTTP.
@@ -28,6 +29,7 @@ requests==2.31.0
 
 &nbsp;
 
+<a id="configuration-client"></a>
 ### Configuration du client HTTP FHIR avec fhir.resources
 
 Par rapport à un simple appel HTTP, nous ajoutons le jeton d'accès (`Authorization`) ainsi que les 4 headers `Ror-*` requis par l'API du ROR (voir la page [Consommation des API FHIR]({{ '/pages/guide/modeleV3/acces-donnees/consommation-api.html' | relative_url }})), puis nous structurons la réponse à l'aide de `fhir.resources`.
