@@ -4,7 +4,7 @@ header:
   - title: Accueil
     url: /
   - title: Guide
-    url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
+    url: /pages/guide/modeleV3/introduction.html
   - title: Ressources FHIR
     url: /pages/guide/modeleV3/resources/practitioner.html
   - title: Exemples
@@ -24,6 +24,12 @@ header:
 
 sidebar:
   guide:
+    - page: Introduction
+      url: /pages/guide/modeleV3/introduction.html
+      title: Introduction
+      next-url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
+      next-title: Vue d'ensemble
+
     - page: Modalités d'accès aux données
       url: /pages/guide/modeleV3/acces-donnees/vue-ensemble.html
       title: Modalités d'accès aux données
