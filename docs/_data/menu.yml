@@ -111,6 +111,14 @@ sidebar:
           url: /pages/guide/modeleV3/resources/questionnaire.html
           title: RORQuestionnaire
 
+    - page: Méthodes FHIR
+      url: /pages/guide/modeleV3/methodes-fhir/export.html
+      title: Méthodes FHIR
+      subfolderitems:
+        - page: $export
+          url: /pages/guide/modeleV3/methodes-fhir/export.html
+          title: $export
+
     - page: Exemples GET
       url: /pages/guide/modeleV3/get/healthcare-service.html
       title: Exemples GET
@@ -186,13 +194,13 @@ sidebar:
           url: /pages/guide/modeleV3/patch/task.html
           title: RORTask
 
-    - page: Méthodes FHIR
-      url: /pages/guide/modeleV3/methodes-fhir/export.html
-      title: Méthodes FHIR
+    - page: Exemples PUT
+      url: /pages/guide/modeleV3/put/healthcare-service.html
+      title: Exemples PUT
       subfolderitems:
-        - page: $export
-          url: /pages/guide/modeleV3/methodes-fhir/export.html
-          title: $export
+        - page: RORHealthcareService
+          url: /pages/guide/modeleV3/put/healthcare-service.html
+          title: RORHealthcareService
 
   exemples:
     - page: Recherche et consultation de l'offre
