@@ -11,9 +11,9 @@ Ce site dédié à l'API FHIR du ROR (Répertoire national de l'Offre et des Res
 
 ### Informations sur ce guide d'implémentation
 
-Ce site s'appuie sur le [guide d'implémentation FHIR officiel du ROR]({{ site.ror.ig_url }}){:target="_blank"}, qui se réfère au modèle d'exposition 3.0.1 du ROR et cible l'implémentation de l'API FHIR dans la solution du ROR National version 5.1.
+Ce site s'appuie sur le [guide d'implémentation FHIR officiel du ROR]({{ site.ror.ig_url }}){:target="_blank"}, qui se réfère au modèle d'exposition 3 du ROR.
 
-Dans ce guide, comme sur le guide d'implémentation officiel, vous retrouverez des indicateurs permettant d'identifier la maturité de certains éléments ou de certaines sections :
+Dans ce guide, vous retrouverez des indicateurs permettant d'identifier la maturité de certains éléments ou de certaines sections :
 
 <div class="wysiwyg" markdown="1">
 - <code><span style="color: #E67E22;">deprecated</span></code> : correspond à ce qui ne sera bientôt plus disponible dans la solution ROR National.
@@ -21,9 +21,11 @@ Dans ce guide, comme sur le guide d'implémentation officiel, vous retrouverez d
 - <code><span style="color: #8E44AD;">under consideration</span></code> : correspond à ce qui est en cours de réflexion dans la solution ROR National. L'objectif de cet indicateur est de donner de la visibilité sur ce qui est à l'étude pour les prochaines versions du ROR National.
 </div>
 
-Les autres éléments ou sections qui n'ont pas ces mentions doivent être implémentés et disponibles dans la version courante de la solution du ROR National.
+Les autres éléments ou sections qui n'ont pas ces mentions sont  disponibles dans la version courante de la solution du ROR National.
 
-Pour plus d'informations sur les versions du guide d'implémentation, n'hésitez pas à consulter l'[historique]({{ site.ror.ig_url }}/history.html){:target="_blank"}. Si vous avez des questions ou des suggestions concernant ce guide, vous pouvez nous les adresser [ici](https://github.com/ansforge/IG-fhir-repertoire-offre-ressources-sante/issues/new/choose){:target="_blank"}.
+Toutes les API ne sont pas consommables par les éditeurs:
+ - <code><span style="color: #22ffd3;">serveur</span></code> : correspond aux API qui ne sont pas ouvertes aux éditeurs.
+
 
 ### Modèle de données FHIR
 

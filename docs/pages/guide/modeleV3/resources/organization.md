@@ -25,7 +25,7 @@ subTitle: Ressources FHIR
 
 Les organisations sont structurées de façon hiérarchique : une entité géographique peut être rattachée à une entité juridique, et une organisation interne est elle-même rattachée à une entité géographique. Cette hiérarchie est portée par le mécanisme `partOf` de la ressource FHIR `Organization`.
 
-`ROROrganization` est référencée par la ressource [RORHealthcareService]({{ '/pages/guide/modeleV3/resources/healthcare-service.html' | relative_url }}) qui décrit l'offre portée par l'organisation, ainsi que par [RORPractitionerRole]({{ '/pages/guide/modeleV3/resources/practitioner-role.html' | relative_url }}) pour les professionnels qui y exercent.
+`ROROrganization` est référencée par la ressource [RORHealthcareService]({{ '/pages/guide/modeleV3/resources/healthcare-service.html' | relative_url }}) qui décrit l'offre portée par l'organisation.
 
 <a id="caracteristiques"></a>
 ## 2. Caractéristiques techniques de la ressource
