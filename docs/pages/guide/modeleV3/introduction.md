@@ -29,7 +29,7 @@ Toutes les API ne sont pas consommables par les éditeurs:
 - <code><span style="color: #22ffd3;">serveur</span></code> : correspond aux API qui ne sont pas ouvertes aux éditeurs.
 </div>
 
-### Modèle de données FHIR
+### Le standard FHIR
 
 FHIR est un standard d'interopérabilité conçu pour l'échange de données de santé entre les différents acteurs de l'écosystème de Santé, développé par HL7 (Health Level 7). Le standard FHIR est de plus en plus utilisé en France et son usage est poussé par l'Union Européenne.
 L'API FHIR du ROR est une API RESTful qui a pour objectif de respecter le standard d'interopérabilité FHIR afin d'exposer les données de l'offre de santé et des ressources en santé et accompagnement médico-social portées par le ROR national.

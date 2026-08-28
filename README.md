@@ -21,7 +21,7 @@ Les ressources exposées : `Practitioner`, `PractitionerRole`, `Organization`, `
 
 Le détail des modalités d'accès (profils, authentification, endpoints) est disponible dans la section [Modalités d'accès aux données](docs/pages/guide/acces-donnees/vue-ensemble.md) de ce guide.
 
-## Modèle de données FHIR
+## Le standard FHIR
 
 Le projet utilise le standard FHIR sur la version R4, en cohérence avec le modèle d'exposition ROR 3.0.1 et le Modèle des Objets de Santé (MOS) de l'ANS.
 
