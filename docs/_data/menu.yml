@@ -115,6 +115,14 @@ sidebar:
               url: /pages/guide/modeleV3/resources/search-params/questionnaire.html
               title: RORQuestionnaire
 
+    - page: Méthodes FHIR
+      url: /pages/guide/modeleV3/methodes-fhir/export.html
+      title: Méthodes FHIR
+      subfolderitems:
+        - page: $export
+          url: /pages/guide/modeleV3/methodes-fhir/export.html
+          title: $export
+
   exemples:
     - page: Recherche et consultation de l'offre
       url: /pages/guide/modeleV3/exemples/consultation-donnees-capacitaires.html
