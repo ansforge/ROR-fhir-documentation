@@ -76,7 +76,7 @@ Plus de précision sur la spécification FHIR :
 
 ### Exemple de requêtes
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 1 : Création de l'entité juridique
+#### Scénario 1 : Création de l'entité juridique <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité juridique. 
 
@@ -175,7 +175,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 2 : Création de l'entité géographique
+#### Scénario 2 : Création de l'entité géographique <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée son entité géographique.
 
@@ -348,7 +348,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement
+#### Scénario 3 : Création d'une offre opérationnelle directement rattachée à l'établissement <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle couvrant une autre zone d'intervention que les offres opérationnelles précédemment enregistrées.
 
@@ -734,7 +734,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 4 : Création d'un pôle
+#### Scénario 4 : Création d'un pôle <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un pôle.
 
@@ -791,7 +791,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 5 : Création d'un service
+#### Scénario 5 : Création d'un service <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée un service.
 
@@ -848,7 +848,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 6 : Création d'une unité fonctionnelle
+#### Scénario 6 : Création d'une unité fonctionnelle <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement crée une unité fonctionnelle.
 
@@ -905,7 +905,7 @@ POST [BASE]/Organization
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante
+#### Scénario 7 : Création d'une offre opérationnelle dans une unité fonctionnelle préexistante <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Un établissement ajoute une offre opérationnelle de consultation neurochirurgicale dans une unité fonctionnelle de consultation.
 
@@ -1224,7 +1224,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 8 : Création d'une offre opérationnelle de ville
+#### Scénario 8 : Création d'une offre opérationnelle de ville <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** A la suite d'un adossement à l'annuaire, le ROR national crée l'offre opérationnelle d'un cabinet de ville.
 
@@ -1510,7 +1510,7 @@ POST [BASE]/HealthcareService
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 9 : Création d'un professionnel
+#### Scénario 9 : Création d'un professionnel <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute un professionnel.
 
@@ -1580,7 +1580,7 @@ POST [BASE]/Practitioner
 }
 ```
 
-#### <code><span style="color: #22ffd3;">serveur</span></code> Scénario 10 : Création d'une situation opérationnelle
+#### Scénario 10 : Création d'une situation opérationnelle <code><span style="color: #22ffd3;">serveur</span></code>
 
 **Description du scénario :** Afin de décrire son offre, un établissement ajoute une situation opérationnelle.
 
