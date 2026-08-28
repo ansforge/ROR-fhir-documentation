@@ -24,8 +24,10 @@ Dans ce guide, vous retrouverez des indicateurs permettant d'identifier la matur
 Les autres éléments ou sections qui n'ont pas ces mentions sont  disponibles dans la version courante de la solution du ROR National.
 
 Toutes les API ne sont pas consommables par les éditeurs:
- - <code><span style="color: #22ffd3;">serveur</span></code> : correspond aux API qui ne sont pas ouvertes aux éditeurs.
 
+<div class="wysiwyg" markdown="1">
+- <code><span style="color: #22ffd3;">serveur</span></code> : correspond aux API qui ne sont pas ouvertes aux éditeurs.
+</div>
 
 ### Modèle de données FHIR
 
