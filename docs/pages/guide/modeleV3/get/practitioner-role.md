@@ -10,7 +10,7 @@ Cette page présente des exemples de requêtes `GET` sur la ressource [RORPracti
 Voici quelques exemples de requêtes sur les situations opérationnelles / exercices professionnels.
 
 <blockquote class="callout-warning">
-<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code>$export</code>  avec l'API `HealthcareService`. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
+<p><strong>Attention :</strong> pour récupérer l'ensemble des résultats au niveau national ou au niveau d'une région, vous devez impérativement utiliser la méthode <code><a href="{{ '/pages/guide/modeleV3/methodes-fhir/export.html' | relative_url }}">$export</a></code> avec l'API `HealthcareService`. Les résultats de cette requête seront tronqués à 10 000 résultats.</p>
 </blockquote>
 
 <a id="recherche-tout"></a>
