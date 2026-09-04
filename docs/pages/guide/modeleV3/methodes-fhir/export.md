@@ -5,6 +5,13 @@ title: $export
 subTitle: Méthodes FHIR
 ---
 
+Pour les consommateurs des API FHIR hébergeant une base de données synchronisée avec les données nationales ou d'une région, 2 scénarios de synchronisation sont possibles:
+
+- effectuer un appel à $export quotidien
+- effectuer un appel à $export hebdomadaire et des appels delta chaque jour (ou plusieurs fois par jour) [rajouter référence de l'exemple]
+
+Il est important d'avoir **à minima une synchronisation complète par semaine**. Les systèmes se basant uniquement sur des deltas et n'effectuant des synchronisations complètes que sporadiquement subissent un phénomène de divergence progressive avec la base référentiel génératrice de frustration et d'incompréhension.
+
 Cette page décrit l'opération asynchrone `$export`, qui permet à un consommateur de réaliser une extraction complète à partir de l'API  `HealthcareService`.
 
 Deux scénarios sont décrits:
