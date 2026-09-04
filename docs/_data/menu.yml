@@ -6,7 +6,7 @@ header:
   - title: Guide
     url: /pages/guide/modeleV3/introduction.html
   - title: Ressources FHIR
-    url: /pages/guide/modeleV3/resources/practitioner.html
+    url: /pages/guide/modeleV3/resources/healthcare-service.html
   - title: Exemples
     url: /pages/guide/modeleV3/exemples/consultation-donnees-capacitaires.html
   - title: Liens externes
