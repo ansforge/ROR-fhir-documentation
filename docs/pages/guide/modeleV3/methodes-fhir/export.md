@@ -8,7 +8,7 @@ subTitle: Méthodes FHIR
 Pour les consommateurs des API FHIR hébergeant une base de données synchronisée avec les données nationales ou d'une région, 2 scénarios de synchronisation sont possibles:
 
 - effectuer un appel à $export quotidien
-- effectuer un appel à $export hebdomadaire et des appels delta chaque jour (ou plusieurs fois par jour) [rajouter référence de l'exemple]
+- effectuer un appel à $export hebdomadaire et des appels delta chaque jour (ou plusieurs fois par jour), voir l'exemple [Rechercher par date de mise à jour]({{ '/pages/guide/modeleV3/get/healthcare-service.html#2-rechercher-par-date-de-mise-à-jour-_lastupdated' | relative_url }})
 
 Il est important d'avoir **à minima une synchronisation complète par semaine**. Les systèmes se basant uniquement sur des deltas et n'effectuant des synchronisations complètes que sporadiquement subissent un phénomène de divergence progressive avec la base référentiel génératrice de frustration et d'incompréhension.
 
