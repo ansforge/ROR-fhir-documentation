@@ -196,7 +196,7 @@ sidebar:
 
     - page: Patch capacitaire
       url: /pages/guide/modeleV3/patch-capacitaire/location.html
-      title: Patch capacitaire
+      title: PATCH capacitaire
       subfolderitems:
         - page: RORLocation
           url: /pages/guide/modeleV3/patch-capacitaire/location.html

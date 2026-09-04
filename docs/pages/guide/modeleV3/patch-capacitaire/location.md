@@ -11,12 +11,6 @@ Cette page décrit la mise à jour des données capacitaires (places ou lits dis
 
 Vous devez posséder les droits d'écriture du capacitaire sur les établissements concernés (liste transmise préalablement à l'ANS).
 
-<blockquote class="stu-note">
-<p>
-Pour la production, vous devrez commander 2 certificats IGC-Santé distincts : l'un pour votre <code>client_id</code> consommateur, l'autre pour votre <code>client_id</code> fournisseur.
-</p>
-</blockquote>
-
 ### Principe
 
 Le `PATCH` capacitaire fonctionne de façon similaire à une requête `GET`, à ces différences près :
@@ -71,14 +65,9 @@ Le body de la requête `PATCH` est construit de la façon suivante :
     "resourceType": "Parameters"
 }
 ```
-
-Le capacitaire que l'on souhaite créer, mettre à jour ou supprimer est ciblé par son FHIRPath (voir note ci-dessous).
-
-<blockquote class="stu-note">
-<p>
 Lors de la transmission de vos accès, l'ANS vous transmet une collection Postman d'exemple ainsi qu'un document explicatif détaillant les différents indicateurs capacitaires et leur FHIRPath correspondant.
-</p>
-</blockquote>
+
+Le capacitaire que l'on souhaite créer, mettre à jour ou supprimer est ciblé par son FHIRPath.
 
 ### Gestion des erreurs
 
@@ -143,7 +132,8 @@ Lorsque plusieurs lieux de réalisation possèdent le même identifiant externe 
     ]
 }
 ```
-Il convient de remonter l'erreur au GRADeS et à l'établissement concerné pour supprimer ces doublons
+
+Il convient de remonter l'erreur au GRADeS et à l'établissement concerné pour supprimer ces doublons.
 
 #### Erreurs 400
 
@@ -177,3 +167,5 @@ Les erreurs `400` regroupent les erreurs métier, par exemple :
     ]
 }
 ```
+
+Il convient de remonter l'erreur au GRADeS et à l'établissement car le GRADeS doit d'être informé de tout disfonctionnement entrainant une donnée non synchronisée.
