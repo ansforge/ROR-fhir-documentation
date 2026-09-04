@@ -194,6 +194,14 @@ sidebar:
           url: /pages/guide/modeleV3/patch/task.html
           title: RORTask
 
+    - page: Patch capacitaire
+      url: /pages/guide/modeleV3/patch-capacitaire/location.html
+      title: Patch capacitaire
+      subfolderitems:
+        - page: RORLocation
+          url: /pages/guide/modeleV3/patch-capacitaire/location.html
+          title: RORLocation
+
     - page: Exemples PUT
       url: /pages/guide/modeleV3/put/healthcare-service.html
       title: Exemples PUT
