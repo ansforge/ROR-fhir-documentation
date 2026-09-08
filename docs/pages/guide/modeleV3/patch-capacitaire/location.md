@@ -85,7 +85,9 @@ Deux cas de figure impliquent une gestion différente dans votre implémentation
             "severity": "error",
             "code": "not-found",
             "diagnostics": "Les données fournies ne permettent pas de déterminer l'indicateur à mettre à jour: Aucun indicateur présent en base ne correspond",
-            "expression": "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+            "expression": [
+               "Location.extension.where(url='https://interop.esante.gouv.fr/ig/fhir/ror/StructureDefinition/ror-location-supported-capacity')"
+            ]
         }
     ]
 }
